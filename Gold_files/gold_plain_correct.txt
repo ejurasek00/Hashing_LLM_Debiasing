@@ -1,0 +1,13 @@
+== GOLD CORRECT ==
+
+
+{"4"},{"hot"},{"yes"},{"false"},{"indeed"},{"omnivore"}
+
+{"4", "hot"},{"4", "yes"},{"4", "false"},{"4", "indeed"},{"hot", "yes"},{"false", "hot"},{"hot", "indeed"},{"hot", "omnivore"},{"false", "yes"},{"indeed", "yes"},{"omnivore", "yes"},{"false", "indeed"},{"false", "omnivore"},{"indeed", "omnivore"}
+
+{"4", "hot", "yes"},{"4", "false", "hot"},{"4", "hot", "indeed"},{"4", "false", "yes"},{"4", "indeed", "yes"},{"4", "false", "indeed"},{"hot", "indeed", "yes"},{"hot", "omnivore", "yes"},{"false", "hot", "yes"},{"false", "hot", "indeed"},{"false", "hot", "omnivore"},{"hot", "indeed", "omnivore"},{"false", "indeed", "yes"},{"false", "omnivore", "yes"},{"indeed", "omnivore", "yes"},{"false", "indeed", "omnivore"}
+
+{"4", "hot", "indeed", "yes"},{"4", "false", "hot", "yes"},{"4", "false", "hot", "indeed"},{"4", "false", "indeed", "yes"},{"hot", "indeed", "omnivore", "yes"},{"false", "hot", "indeed", "yes"},{"false", "hot", "omnivore", "yes"},{"false", "hot", "indeed", "omnivore"},{"false", "indeed", "omnivore", "yes"}
+
+
+{"4", "false", "hot", "indeed", "yes"},{"false", "hot", "indeed", "omnivore", "yes"}

@@ -1,0 +1,811 @@
+
+
+
+Find all frequent itemsets with minimal support equal to 2 and length 1, so set_length_1= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,6,carnivore,cold,no,true,negative
+
+human,4,herbivore,cold,no,true,negative
+
+fox,6,herbivore,cold,no,true,negative
+
+platypus,6,omnivore,cold,no,false,negative
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+
+
+
+ChatGPT
+
+To find all frequent itemsets with a minimal support of 2 and a length
+of 1, we'll look at each column individually and count how many times
+each unique value appears across the rows. We will then select those
+that appear at least twice.
+
+Here’s the breakdown:
+
+ 1.
+
+    *legs count*:
+
+      * 6 appears 3 times (rabbit, fox, platypus)
+      * 4 appears 1 time (human)
+
+    Frequent itemset: |{'6'}|
+
+ 2.
+
+    *diet*:
+
+      * carnivore appears 1 time (rabbit)
+      * herbivore appears 2 times (human, fox)
+      * omnivore appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore'}|
+
+ 3.
+
+    *blood*:
+
+      * cold appears 4 times (all rows)
+
+    Frequent itemset: |{'cold'}|
+
+ 4.
+
+    *body hair*:
+
+      * no appears 4 times (all rows)
+
+    Frequent itemset: |{'no'}|
+
+ 5.
+
+    *eggs*:
+
+      * true appears 3 times (rabbit, human, fox)
+      * false appears 1 time (platypus)
+
+    Frequent itemset: |{'true'}|
+
+ 6.
+
+    *breastfeeding*:
+
+      * negative appears 4 times (all rows)
+
+    Frequent itemset: |{'negative'}|
+
+*Final Frequent Itemsets (with minimal support = 2 and length 1):*
+
+|set = {"6", "herbivore", "cold", "no", "true", "negative"}|
+
+This set includes all itemsets from the table that occur at least twice.
+
+
+-----------------------------------------------------------------------------------------------------------------
+Find all frequent itemsets with minimal support equal to 2 and length 2, so set_length_2= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,6,carnivore,cold,no,true,negative
+
+human,4,herbivore,cold,no,true,negative
+
+fox,6,herbivore,cold,no,true,negative
+
+platypus,6,omnivore,cold,no,false,negative
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+
+
+ChatGPT
+
+To find all frequent itemsets with a minimal support of 2 and length of
+2, we'll look at pairs of attributes from the table and count how many
+times each pair appears across the rows. We will then select those that
+appear at least twice.
+
+
+      Step-by-Step Analysis
+
+ 1.
+
+    *legs count + diet*:
+
+      * (6, carnivore) appears 1 time (rabbit)
+      * (6, herbivore) appears 1 time (fox)
+      * (6, omnivore) appears 1 time (platypus)
+      * (4, herbivore) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 2.
+
+    *legs count + blood*:
+
+      * (6, cold) appears 3 times (rabbit, fox, platypus)
+      * (4, cold) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'cold'}|
+
+ 3.
+
+    *legs count + body hair*:
+
+      * (6, no) appears 3 times (rabbit, fox, platypus)
+      * (4, no) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'no'}|
+
+ 4.
+
+    *legs count + eggs*:
+
+      * (6, true) appears 2 times (rabbit, fox)
+      * (6, false) appears 1 time (platypus)
+      * (4, true) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'true'}|
+
+ 5.
+
+    *legs count + breastfeeding*:
+
+      * (6, negative) appears 3 times (rabbit, fox, platypus)
+      * (4, negative) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'negative'}|
+
+ 6.
+
+    *diet + blood*:
+
+      * (carnivore, cold) appears 1 time (rabbit)
+      * (herbivore, cold) appears 2 times (human, fox)
+      * (omnivore, cold) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'cold'}|
+
+ 7.
+
+    *diet + body hair*:
+
+      * (carnivore, no) appears 1 time (rabbit)
+      * (herbivore, no) appears 2 times (human, fox)
+      * (omnivore, no) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'no'}|
+
+ 8.
+
+    *diet + eggs*:
+
+      * (carnivore, true) appears 1 time (rabbit)
+      * (herbivore, true) appears 2 times (human, fox)
+      * (omnivore, false) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'true'}|
+
+ 9.
+
+    *diet + breastfeeding*:
+
+      * (carnivore, negative) appears 1 time (rabbit)
+      * (herbivore, negative) appears 2 times (human, fox)
+      * (omnivore, negative) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'negative'}|
+
+10.
+
+    *blood + body hair*:
+
+      * (cold, no) appears 4 times (all rows)
+
+    Frequent itemset: |{'cold', 'no'}|
+
+11.
+
+    *blood + eggs*:
+
+      * (cold, true) appears 3 times (rabbit, human, fox)
+      * (cold, false) appears 1 time (platypus)
+
+    Frequent itemset: |{'cold', 'true'}|
+
+12.
+
+    *blood + breastfeeding*:
+
+      * (cold, negative) appears 4 times (all rows)
+
+    Frequent itemset: |{'cold', 'negative'}|
+
+13.
+
+    *body hair + eggs*:
+
+      * (no, true) appears 3 times (rabbit, human, fox)
+      * (no, false) appears 1 time (platypus)
+
+    Frequent itemset: |{'no', 'true'}|
+
+14.
+
+    *body hair + breastfeeding*:
+
+      * (no, negative) appears 4 times (all rows)
+
+    Frequent itemset: |{'no', 'negative'}|
+
+15.
+
+    *eggs + breastfeeding*:
+
+      * (true, negative) appears 3 times (rabbit, human, fox)
+      * (false, negative) appears 1 time (platypus)
+
+    Frequent itemset: |{'true', 'negative'}|
+
+
+      Final Frequent Itemsets (with minimal support = 2 and length 2):
+
+|set_length_2 = {{"6", "cold"}, {"6", "no"}, {"6", "true"}, {"6",
+"negative"}, {"herbivore", "cold"}, {"herbivore", "no"}, {"herbivore",
+"true"}, {"herbivore", "negative"}, {"cold", "no"}, {"cold", "true"},
+{"cold", "negative"}, {"no", "true"}, {"no", "negative"}, {"true",
+"negative"}}|
+
+This set includes all itemsets of length 2 from the table that occur at
+least twice.
+
+
+-----------------------------------------------------------------------------------------------------------------
+Find all frequent itemsets with minimal support equal to 2 and length 3, so set_length_3= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,6,carnivore,cold,no,true,negative
+
+human,4,herbivore,cold,no,true,negative
+
+fox,6,herbivore,cold,no,true,negative
+
+platypus,6,omnivore,cold,no,false,negative
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+
+
+ChatGPT
+
+To find all frequent itemsets with a minimal support of 2 and a length
+of 3, we need to consider triplets of attributes from the table and
+check how many times each triplet appears across the rows. We will then
+select those that appear at least twice.
+
+
+      Step-by-Step Analysis
+
+ 1.
+
+    *legs count + diet + blood*:
+
+      * (6, carnivore, cold) appears 1 time (rabbit)
+      * (6, herbivore, cold) appears 1 time (fox)
+      * (6, omnivore, cold) appears 1 time (platypus)
+      * (4, herbivore, cold) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 2.
+
+    *legs count + diet + body hair*:
+
+      * (6, carnivore, no) appears 1 time (rabbit)
+      * (6, herbivore, no) appears 1 time (fox)
+      * (6, omnivore, no) appears 1 time (platypus)
+      * (4, herbivore, no) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 3.
+
+    *legs count + diet + eggs*:
+
+      * (6, carnivore, true) appears 1 time (rabbit)
+      * (6, herbivore, true) appears 1 time (fox)
+      * (6, omnivore, false) appears 1 time (platypus)
+      * (4, herbivore, true) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 4.
+
+    *legs count + diet + breastfeeding*:
+
+      * (6, carnivore, negative) appears 1 time (rabbit)
+      * (6, herbivore, negative) appears 1 time (fox)
+      * (6, omnivore, negative) appears 1 time (platypus)
+      * (4, herbivore, negative) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 5.
+
+    *legs count + blood + body hair*:
+
+      * (6, cold, no) appears 3 times (rabbit, fox, platypus)
+      * (4, cold, no) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'cold', 'no'}|
+
+ 6.
+
+    *legs count + blood + eggs*:
+
+      * (6, cold, true) appears 2 times (rabbit, fox)
+      * (6, cold, false) appears 1 time (platypus)
+      * (4, cold, true) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'cold', 'true'}|
+
+ 7.
+
+    *legs count + blood + breastfeeding*:
+
+      * (6, cold, negative) appears 3 times (rabbit, fox, platypus)
+      * (4, cold, negative) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'cold', 'negative'}|
+
+ 8.
+
+    *legs count + body hair + eggs*:
+
+      * (6, no, true) appears 2 times (rabbit, fox)
+      * (6, no, false) appears 1 time (platypus)
+      * (4, no, true) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'no', 'true'}|
+
+ 9.
+
+    *legs count + body hair + breastfeeding*:
+
+      * (6, no, negative) appears 3 times (rabbit, fox, platypus)
+      * (4, no, negative) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'no', 'negative'}|
+
+10.
+
+    *legs count + eggs + breastfeeding*:
+
+      * (6, true, negative) appears 2 times (rabbit, fox)
+      * (6, false, negative) appears 1 time (platypus)
+      * (4, true, negative) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'true', 'negative'}|
+
+11.
+
+    *diet + blood + body hair*:
+
+      * (carnivore, cold, no) appears 1 time (rabbit)
+      * (herbivore, cold, no) appears 2 times (human, fox)
+      * (omnivore, cold, no) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'cold', 'no'}|
+
+12.
+
+    *diet + blood + eggs*:
+
+      * (carnivore, cold, true) appears 1 time (rabbit)
+      * (herbivore, cold, true) appears 2 times (human, fox)
+      * (omnivore, cold, false) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'cold', 'true'}|
+
+13.
+
+    *diet + blood + breastfeeding*:
+
+      * (carnivore, cold, negative) appears 1 time (rabbit)
+      * (herbivore, cold, negative) appears 2 times (human, fox)
+      * (omnivore, cold, negative) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'cold', 'negative'}|
+
+14.
+
+    *diet + body hair + eggs*:
+
+      * (carnivore, no, true) appears 1 time (rabbit)
+      * (herbivore, no, true) appears 2 times (human, fox)
+      * (omnivore, no, false) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'no', 'true'}|
+
+15.
+
+    *diet + body hair + breastfeeding*:
+
+      * (carnivore, no, negative) appears 1 time (rabbit)
+      * (herbivore, no, negative) appears 2 times (human, fox)
+      * (omnivore, no, negative) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'no', 'negative'}|
+
+16.
+
+    *diet + eggs + breastfeeding*:
+
+      * (carnivore, true, negative) appears 1 time (rabbit)
+      * (herbivore, true, negative) appears 2 times (human, fox)
+      * (omnivore, false, negative) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'true', 'negative'}|
+
+17.
+
+    *blood + body hair + eggs*:
+
+      * (cold, no, true) appears 3 times (rabbit, human, fox)
+      * (cold, no, false) appears 1 time (platypus)
+
+    Frequent itemset: |{'cold', 'no', 'true'}|
+
+18.
+
+    *blood + body hair + breastfeeding*:
+
+      * (cold, no, negative) appears 4 times (all rows)
+
+    Frequent itemset: |{'cold', 'no', 'negative'}|
+
+19.
+
+    *blood + eggs + breastfeeding*:
+
+      * (cold, true, negative) appears 3 times (rabbit, human, fox)
+      * (cold, false, negative) appears 1 time (platypus)
+
+    Frequent itemset: |{'cold', 'true', 'negative'}|
+
+20.
+
+    *body hair + eggs + breastfeeding*:
+
+      * (no, true, negative) appears 3 times (rabbit, human, fox)
+      * (no, false, negative) appears 1 time (platypus)
+
+    Frequent itemset: |{'no', 'true', 'negative'}|
+
+
+      Final Frequent Itemsets (with minimal support = 2 and length 3):
+
+|set_length_3 = {{"6", "cold", "no"}, {"6", "cold", "true"}, {"6",
+"cold", "negative"}, {"6", "no", "true"}, {"6", "no", "negative"}, {"6",
+"true", "negative"}, {"herbivore", "cold", "no"}, {"herbivore", "cold",
+"true"}, {"herbivore", "cold", "negative"}, {"herbivore", "no", "true"},
+{"herbivore", "no", "negative"}, {"herbivore", "true", "negative"},
+{"cold", "no", "true"}, {"cold", "no", "negative"}, {"cold", "true",
+"negative"}, {"no", "true", "negative"}}|
+
+This set includes all itemsets of length 3 from the table that occur at
+least twice.
+
+
+-----------------------------------------------------------------------------------------------------------------
+Find all frequent itemsets with minimal support equal to 2 and length 4, so set_length4= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,6,carnivore,cold,no,true,negative
+
+human,4,herbivore,cold,no,true,negative
+
+fox,6,herbivore,cold,no,true,negative
+
+platypus,6,omnivore,cold,no,false,negative
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+
+            ChatGPT řekl:
+
+ChatGPT
+
+To find all frequent itemsets with a minimal support of 2 and a length
+of 4, we'll analyze all possible combinations of four attributes from
+the table and check how many times each combination appears across the
+rows. We will then select those that appear at least twice.
+
+
+      Step-by-Step Analysis
+
+ 1.
+
+    *legs count + diet + blood + body hair*:
+
+      * (6, carnivore, cold, no) appears 1 time (rabbit)
+      * (6, herbivore, cold, no) appears 1 time (fox)
+      * (6, omnivore, cold, no) appears 1 time (platypus)
+      * (4, herbivore, cold, no) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 2.
+
+    *legs count + diet + blood + eggs*:
+
+      * (6, carnivore, cold, true) appears 1 time (rabbit)
+      * (6, herbivore, cold, true) appears 1 time (fox)
+      * (6, omnivore, cold, false) appears 1 time (platypus)
+      * (4, herbivore, cold, true) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 3.
+
+    *legs count + diet + blood + breastfeeding*:
+
+      * (6, carnivore, cold, negative) appears 1 time (rabbit)
+      * (6, herbivore, cold, negative) appears 1 time (fox)
+      * (6, omnivore, cold, negative) appears 1 time (platypus)
+      * (4, herbivore, cold, negative) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 4.
+
+    *legs count + diet + body hair + eggs*:
+
+      * (6, carnivore, no, true) appears 1 time (rabbit)
+      * (6, herbivore, no, true) appears 1 time (fox)
+      * (6, omnivore, no, false) appears 1 time (platypus)
+      * (4, herbivore, no, true) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 5.
+
+    *legs count + diet + body hair + breastfeeding*:
+
+      * (6, carnivore, no, negative) appears 1 time (rabbit)
+      * (6, herbivore, no, negative) appears 1 time (fox)
+      * (6, omnivore, no, negative) appears 1 time (platypus)
+      * (4, herbivore, no, negative) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 6.
+
+    *legs count + diet + eggs + breastfeeding*:
+
+      * (6, carnivore, true, negative) appears 1 time (rabbit)
+      * (6, herbivore, true, negative) appears 1 time (fox)
+      * (6, omnivore, false, negative) appears 1 time (platypus)
+      * (4, herbivore, true, negative) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 7.
+
+    *legs count + blood + body hair + eggs*:
+
+      * (6, cold, no, true) appears 2 times (rabbit, fox)
+      * (6, cold, no, false) appears 1 time (platypus)
+      * (4, cold, no, true) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'cold', 'no', 'true'}|
+
+ 8.
+
+    *legs count + blood + body hair + breastfeeding*:
+
+      * (6, cold, no, negative) appears 3 times (rabbit, fox, platypus)
+      * (4, cold, no, negative) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'cold', 'no', 'negative'}|
+
+ 9.
+
+    *legs count + blood + eggs + breastfeeding*:
+
+      * (6, cold, true, negative) appears 2 times (rabbit, fox)
+      * (6, cold, false, negative) appears 1 time (platypus)
+      * (4, cold, true, negative) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'cold', 'true', 'negative'}|
+
+10.
+
+    *legs count + body hair + eggs + breastfeeding*:
+
+      * (6, no, true, negative) appears 2 times (rabbit, fox)
+      * (6, no, false, negative) appears 1 time (platypus)
+      * (4, no, true, negative) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'no', 'true', 'negative'}|
+
+11.
+
+    *diet + blood + body hair + eggs*:
+
+      * (carnivore, cold, no, true) appears 1 time (rabbit)
+      * (herbivore, cold, no, true) appears 2 times (human, fox)
+      * (omnivore, cold, no, false) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'cold', 'no', 'true'}|
+
+12.
+
+    *diet + blood + body hair + breastfeeding*:
+
+      * (carnivore, cold, no, negative) appears 1 time (rabbit)
+      * (herbivore, cold, no, negative) appears 2 times (human, fox)
+      * (omnivore, cold, no, negative) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'cold', 'no', 'negative'}|
+
+13.
+
+    *diet + blood + eggs + breastfeeding*:
+
+      * (carnivore, cold, true, negative) appears 1 time (rabbit)
+      * (herbivore, cold, true, negative) appears 2 times (human, fox)
+      * (omnivore, cold, false, negative) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'cold', 'true', 'negative'}|
+
+14.
+
+    *diet + body hair + eggs + breastfeeding*:
+
+      * (carnivore, no, true, negative) appears 1 time (rabbit)
+      * (herbivore, no, true, negative) appears 2 times (human, fox)
+      * (omnivore, no, false, negative) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'no', 'true', 'negative'}|
+
+15.
+
+    *blood + body hair + eggs + breastfeeding*:
+
+      * (cold, no, true, negative) appears 3 times (rabbit, human, fox)
+      * (cold, no, false, negative) appears 1 time (platypus)
+
+    Frequent itemset: |{'cold', 'no', 'true', 'negative'}|
+
+
+      Final Frequent Itemsets (with minimal support = 2 and length 4):
+
+|set_length_4 = {{"6", "cold", "no", "true"}, {"6", "cold", "no",
+"negative"}, {"6", "cold", "true", "negative"}, {"6", "no", "true",
+"negative"}, {"herbivore", "cold", "no", "true"}, {"herbivore", "cold",
+"no", "negative"}, {"herbivore", "cold", "true", "negative"},
+{"herbivore", "no", "true", "negative"}, {"cold", "no", "true",
+"negative"}}|
+
+This set includes all itemsets of length 4 from the table that occur at
+least twice.
+
+
+-----------------------------------------------------------------------------------------------------------------
+Find all frequent itemsets with minimal support equal to 2 and length 5, so set_length_5= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,6,carnivore,cold,no,true,negative
+
+human,4,herbivore,cold,no,true,negative
+
+fox,6,herbivore,cold,no,true,negative
+
+platypus,6,omnivore,cold,no,false,negative
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+
+
+ChatGPT
+
+To find all frequent itemsets with a minimal support of 2 and a length
+of 5, we'll analyze all possible combinations of five attributes from
+the table and check how many times each combination appears across the
+rows. We will then select those that appear at least twice.
+
+
+      Step-by-Step Analysis
+
+ 1.
+
+    *legs count + diet + blood + body hair + eggs*:
+
+      * (6, carnivore, cold, no, true) appears 1 time (rabbit)
+      * (6, herbivore, cold, no, true) appears 1 time (fox)
+      * (6, omnivore, cold, no, false) appears 1 time (platypus)
+      * (4, herbivore, cold, no, true) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 2.
+
+    *legs count + diet + blood + body hair + breastfeeding*:
+
+      * (6, carnivore, cold, no, negative) appears 1 time (rabbit)
+      * (6, herbivore, cold, no, negative) appears 1 time (fox)
+      * (6, omnivore, cold, no, negative) appears 1 time (platypus)
+      * (4, herbivore, cold, no, negative) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 3.
+
+    *legs count + diet + blood + eggs + breastfeeding*:
+
+      * (6, carnivore, cold, true, negative) appears 1 time (rabbit)
+      * (6, herbivore, cold, true, negative) appears 1 time (fox)
+      * (6, omnivore, cold, false, negative) appears 1 time (platypus)
+      * (4, herbivore, cold, true, negative) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 4.
+
+    *legs count + diet + body hair + eggs + breastfeeding*:
+
+      * (6, carnivore, no, true, negative) appears 1 time (rabbit)
+      * (6, herbivore, no, true, negative) appears 1 time (fox)
+      * (6, omnivore, no, false, negative) appears 1 time (platypus)
+      * (4, herbivore, no, true, negative) appears 1 time (human)
+
+    No frequent itemset here since none appear at least twice.
+
+ 5.
+
+    *legs count + blood + body hair + eggs + breastfeeding*:
+
+      * (6, cold, no, true, negative) appears 2 times (rabbit, fox)
+      * (6, cold, no, false, negative) appears 1 time (platypus)
+      * (4, cold, no, true, negative) appears 1 time (human)
+
+    Frequent itemset: |{'6', 'cold', 'no', 'true', 'negative'}|
+
+ 6.
+
+    *diet + blood + body hair + eggs + breastfeeding*:
+
+      * (carnivore, cold, no, true, negative) appears 1 time (rabbit)
+      * (herbivore, cold, no, true, negative) appears 2 times (human, fox)
+      * (omnivore, cold, no, false, negative) appears 1 time (platypus)
+
+    Frequent itemset: |{'herbivore', 'cold', 'no', 'true', 'negative'}|
+
+
+      Final Frequent Itemsets (with minimal support = 2 and length 5):
+
+|set_length_5 = {{"6", "cold", "no", "true", "negative"}, {"herbivore",
+"cold", "no", "true", "negative"}}|
+
+This set includes all itemsets of length 5 from the table that occur at
+least twice.
+

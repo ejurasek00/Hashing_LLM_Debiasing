@@ -1,0 +1,226 @@
+Find all frequent itemsets with minimal support equal to 2 and length 1, so set_length1= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+LLAMA
+
+To find all frequent itemsets with minimal support equal to 2 and length 1, we need to identify the individual items (or attributes) that appear at least twice in the dataset. Since the length is 1, we are looking at each attribute individually.
+
+Given the dataset:
+
+    name: rabbit, human, fox, platypus
+    legs count: 4, 2, 4, 4
+    diet: herbivore, omnivore, omnivore, carnivore
+    blood: hot, hot, hot, hot
+    body hair: yes, yes, yes, yes
+    eggs: false, false, false, true
+    breastfeeding: indeed, indeed, indeed, indeed
+
+Let's identify the frequent itemsets with a support of at least 2:
+
+    For "legs count": {4} appears 3 times, {2} appears 1 time. So, {4} is a frequent itemset.
+    For "diet": {herbivore} appears 1 time, {omnivore} appears 2 times, {carnivore} appears 1 time. So, {omnivore} is a frequent itemset.
+    For "blood": {hot} appears 4 times. So, {hot} is a frequent itemset.
+    For "body hair": {yes} appears 4 times. So, {yes} is a frequent itemset.
+    For "eggs": {false} appears 3 times, {true} appears 1 time. So, {false} is a frequent itemset.
+    For "breastfeeding": {indeed} appears 4 times. So, {indeed} is a frequent itemset.
+
+Therefore, the set of frequent itemsets with length 1 and minimal support equal to 2 is:
+
+set_length1 = {{"4"},{"omnivore"},{"hot"},{"yes"},{"false"},{"indeed"}}
+
+----------------------------------------------------------------------------------------------------------------
+Find all frequent itemsets with minimal support equal to 2 and length 2, so set_length2= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+LLAMA
+
+
+To find all frequent itemsets with minimal support equal to 2 and length 2, we need to identify the combinations of two items (or attributes) that appear at least twice in the dataset.
+
+Given the dataset:
+
+    name: rabbit, human, fox, platypus
+    legs count: 4, 2, 4, 4
+    diet: herbivore, omnivore, omnivore, carnivore
+    blood: hot, hot, hot, hot
+    body hair: yes, yes, yes, yes
+    eggs: false, false, false, true
+    breastfeeding: indeed, indeed, indeed, indeed
+
+Let's identify the frequent itemsets with a support of at least 2:
+
+    {4, hot} appears 3 times
+    {4, yes} appears 3 times
+    {4, indeed} appears 3 times
+    {omnivore, hot} appears 2 times
+    {omnivore, yes} appears 2 times
+    {omnivore, indeed} appears 2 times
+    {hot, yes} appears 4 times
+    {hot, indeed} appears 4 times
+    {yes, indeed} appears 4 times
+    {false, hot} appears 3 times
+    {false, yes} appears 3 times
+    {false, indeed} appears 3 times
+
+Therefore, the set of frequent itemsets with length 2 and minimal support equal to 2 is:
+
+set_length2 = {{"4, hot"},{"4, yes"},{"4, indeed"},{"omnivore, hot"},{"omnivore, yes"},{"omnivore, indeed"},{"hot, yes"},{"hot, indeed"},{"yes, indeed"},{"false, hot"},{"false, yes"},{"false, indeed"}}
+
+
+----------------------------------------------------------------------------------------------------------------
+Find all frequent itemsets with minimal support equal to 2 and length 3, so set_length3= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+
+LLAMA
+
+To find all frequent itemsets with minimal support equal to 2 and length 3, we need to identify the combinations of three items (or attributes) that appear at least twice in the dataset.
+
+Given the dataset:
+
+    name: rabbit, human, fox, platypus
+    legs count: 4, 2, 4, 4
+    diet: herbivore, omnivore, omnivore, carnivore
+    blood: hot, hot, hot, hot
+    body hair: yes, yes, yes, yes
+    eggs: false, false, false, true
+    breastfeeding: indeed, indeed, indeed, indeed
+
+Let's identify the frequent itemsets with a support of at least 2:
+
+    {4, hot, yes} appears 3 times
+    {4, hot, indeed} appears 3 times
+    {4, yes, indeed} appears 3 times
+    {omnivore, hot, yes} appears 2 times
+    {omnivore, hot, indeed} appears 2 times
+    {omnivore, yes, indeed} appears 2 times
+    {hot, yes, indeed} appears 4 times
+    {false, hot, yes} appears 3 times
+    {false, hot, indeed} appears 3 times
+    {false, yes, indeed} appears 3 times
+
+Therefore, the set of frequent itemsets with length 3 and minimal support equal to 2 is:
+
+set_length3 = {{"4, hot, yes"},{"4, hot, indeed"},{"4, yes, indeed"},{"omnivore, hot, yes"},{"omnivore, hot, indeed"},{"omnivore, yes, indeed"},{"hot, yes, indeed"},{"false, hot, yes"},{"false, hot, indeed"},{"false, yes, indeed"}}
+
+----------------------------------------------------------------------------------------------------------------
+Find all frequent itemsets with minimal support equal to 2 and length 4, so set_length4= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+
+LLAMA
+
+To find all frequent itemsets with minimal support equal to 2 and length 4, we need to identify the combinations of four items (or attributes) that appear at least twice in the dataset.
+
+Given the dataset:
+
+    name: rabbit, human, fox, platypus
+    legs count: 4, 2, 4, 4
+    diet: herbivore, omnivore, omnivore, carnivore
+    blood: hot, hot, hot, hot
+    body hair: yes, yes, yes, yes
+    eggs: false, false, false, true
+    breastfeeding: indeed, indeed, indeed, indeed
+
+Let's identify the frequent itemsets with a support of at least 2:
+
+    {4, hot, yes, indeed} appears 3 times
+    {omnivore, hot, yes, indeed} appears 2 times
+    {false, hot, yes, indeed} appears 3 times
+
+Therefore, the set of frequent itemsets with length 4 and minimal support equal to 2 is:
+
+set_length4 = {{"4, hot, yes, indeed"},{"omnivore, hot, yes, indeed"},{"false, hot, yes, indeed"}}
+
+
+----------------------------------------------------------------------------------------------------------------
+Find all frequent itemsets with minimal support equal to 2 and length 5, so set_length5= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+LLAMA
+
+To find all frequent itemsets with minimal support equal to 2 and length 5, we need to identify the combinations of five items (or attributes) that appear at least twice in the dataset.
+
+Given the dataset:
+
+    name: rabbit, human, fox, platypus
+    legs count: 4, 2, 4, 4
+    diet: herbivore, omnivore, omnivore, carnivore
+    blood: hot, hot, hot, hot
+    body hair: yes, yes, yes, yes
+    eggs: false, false, false, true
+    breastfeeding: indeed, indeed, indeed, indeed
+
+Let's identify the frequent itemsets with a support of at least 2:
+
+    {4, hot, yes, false, indeed} appears 2 times
+    {omnivore, hot, yes, false, indeed} appears 2 times
+
+Therefore, the set of frequent itemsets with length 5 and minimal support equal to 2 is:
+
+set_length5 = {{"4, hot, yes, false, indeed"},{"omnivore, hot, yes, false, indeed"}}

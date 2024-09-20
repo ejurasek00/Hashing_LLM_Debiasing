@@ -1,0 +1,843 @@
+Find all frequent itemsets with minimal support equal to 2 and length 1, so set_length1= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+
+
+ChatGPT
+
+To find all frequent itemsets with a minimal support of 2 and length 1,
+we'll manually count how often each item (value) appears in the dataset
+and include those that appear at least twice.
+
+
+      Dataset
+
+
+|name        legs count  diet      blood  body hair  eggs   breastfeeding
+rabbit      4           herbivore hot    yes        false  indeed
+human       2           omnivore  hot    yes        false  indeed
+fox         4           omnivore  hot    yes        false  indeed
+platypus    4           carnivore hot    yes        true   indeed
+|
+
+
+      Counting Frequencies:
+
+  *
+
+    *legs count:*
+
+      o 4 → appears 3 times (rabbit, fox, platypus)
+      o 2 → appears 1 time (human)
+  *
+
+    *diet:*
+
+      o herbivore → appears 1 time (rabbit)
+      o omnivore → appears 2 times (human, fox)
+      o carnivore → appears 1 time (platypus)
+  *
+
+    *blood:*
+
+      o hot → appears 4 times (all animals)
+  *
+
+    *body hair:*
+
+      o yes → appears 4 times (all animals)
+  *
+
+    *eggs:*
+
+      o false → appears 3 times (rabbit, human, fox)
+      o true → appears 1 time (platypus)
+  *
+
+    *breastfeeding:*
+
+      o indeed → appears 4 times (all animals)
+
+
+      Frequent Itemsets with Minimal Support of 2 and Length 1:
+
+We now collect the items that appear at least twice:
+
+
+
+|set_length1 = {"4", "omnivore", "hot", "yes", "false", "indeed"}
+|
+
+These itemsets have a support of at least 2 and a length of 1.
+
+
+-----------------------------------------------------------------------------------------------------------------
+Find all frequent itemsets with minimal support equal to 2 and length 2, so set_length2= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+
+
+ChatGPT
+
+To find all frequent itemsets with a minimal support of 2 and length 2,
+we need to look at combinations of items (each of length 2) and count
+how many times each combination appears in the dataset. Only those
+combinations that appear at least twice will be included.
+
+
+      Dataset Recap:
+
+
+
+|name        legs count  diet      blood  body hair  eggs   breastfeeding
+rabbit      4           herbivore hot    yes        false  indeed
+human       2           omnivore  hot    yes        false  indeed
+fox         4           omnivore  hot    yes        false  indeed
+platypus    4           carnivore hot    yes        true   indeed
+|
+
+
+      Possible Combinations of Length 2:
+
+ 1.
+
+    *(legs count, diet):*
+
+      * (4, herbivore) → 1 time (rabbit)
+      * (4, omnivore) → 1 time (fox)
+      * (4, carnivore) → 1 time (platypus)
+      * (2, omnivore) → 1 time (human)
+
+    No combination appears more than once.
+
+ 2.
+
+    *(legs count, blood):*
+
+      * (4, hot) → 3 times (rabbit, fox, platypus)
+      * (2, hot) → 1 time (human)
+
+    Only (4, hot) appears at least twice.
+
+ 3.
+
+    *(legs count, body hair):*
+
+      * (4, yes) → 3 times (rabbit, fox, platypus)
+      * (2, yes) → 1 time (human)
+
+    Only (4, yes) appears at least twice.
+
+ 4.
+
+    *(legs count, eggs):*
+
+      * (4, false) → 2 times (rabbit, fox)
+      * (4, true) → 1 time (platypus)
+      * (2, false) → 1 time (human)
+
+    Only (4, false) appears at least twice.
+
+ 5.
+
+    *(legs count, breastfeeding):*
+
+      * (4, indeed) → 3 times (rabbit, fox, platypus)
+      * (2, indeed) → 1 time (human)
+
+    Only (4, indeed) appears at least twice.
+
+ 6.
+
+    *(diet, blood):*
+
+      * (herbivore, hot) → 1 time (rabbit)
+      * (omnivore, hot) → 2 times (human, fox)
+      * (carnivore, hot) → 1 time (platypus)
+
+    Only (omnivore, hot) appears at least twice.
+
+ 7.
+
+    *(diet, body hair):*
+
+      * (herbivore, yes) → 1 time (rabbit)
+      * (omnivore, yes) → 2 times (human, fox)
+      * (carnivore, yes) → 1 time (platypus)
+
+    Only (omnivore, yes) appears at least twice.
+
+ 8.
+
+    *(diet, eggs):*
+
+      * (herbivore, false) → 1 time (rabbit)
+      * (omnivore, false) → 2 times (human, fox)
+      * (carnivore, true) → 1 time (platypus)
+
+    Only (omnivore, false) appears at least twice.
+
+ 9.
+
+    *(diet, breastfeeding):*
+
+      * (herbivore, indeed) → 1 time (rabbit)
+      * (omnivore, indeed) → 2 times (human, fox)
+      * (carnivore, indeed) → 1 time (platypus)
+
+    Only (omnivore, indeed) appears at least twice.
+
+10.
+
+    *(blood, body hair):*
+
+      * (hot, yes) → 4 times (all animals)
+
+    This appears at least twice.
+
+11.
+
+    *(blood, eggs):*
+
+      * (hot, false) → 3 times (rabbit, human, fox)
+      * (hot, true) → 1 time (platypus)
+
+    Only (hot, false) appears at least twice.
+
+12.
+
+    *(blood, breastfeeding):*
+
+      * (hot, indeed) → 4 times (all animals)
+
+    This appears at least twice.
+
+13.
+
+    *(body hair, eggs):*
+
+      * (yes, false) → 3 times (rabbit, human, fox)
+      * (yes, true) → 1 time (platypus)
+
+    Only (yes, false) appears at least twice.
+
+14.
+
+    *(body hair, breastfeeding):*
+
+      * (yes, indeed) → 4 times (all animals)
+
+    This appears at least twice.
+
+15.
+
+    *(eggs, breastfeeding):*
+
+      * (false, indeed) → 3 times (rabbit, human, fox)
+      * (true, indeed) → 1 time (platypus)
+
+    Only (false, indeed) appears at least twice.
+
+
+      Frequent Itemsets with Minimal Support of 2 and Length 2:
+
+
+
+|set_length2 = {{"4", "hot"}, {"4", "yes"}, {"4", "false"}, {"4", "indeed"}, {"omnivore", "hot"}, {"omnivore", "yes"}, {"omnivore", "false"}, {"omnivore", "indeed"}, {"hot", "yes"}, {"hot", "false"}, {"hot", "indeed"}, {"yes", "false"}, {"yes", "indeed"}, {"false", "indeed"}}
+|
+
+These itemsets have a support of at least 2 and a length of 2.
+
+
+-----------------------------------------------------------------------------------------------------------------
+Find all frequent itemsets with minimal support equal to 2 and length 3, so set_length3= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+
+ChatGPT
+
+To find all frequent itemsets with a minimal support of 2 and length 3,
+we need to look at combinations of three items and count how many times
+each combination appears in the dataset. Only those combinations that
+appear at least twice will be included.
+
+
+      Dataset Recap:
+
+
+
+|name        legs count  diet      blood  body hair  eggs   breastfeeding
+rabbit      4           herbivore hot    yes        false  indeed
+human       2           omnivore  hot    yes        false  indeed
+fox         4           omnivore  hot    yes        false  indeed
+platypus    4           carnivore hot    yes        true   indeed
+|
+
+
+      Possible Combinations of Length 3:
+
+ 1.
+
+    *(legs count, diet, blood):*
+
+      * (4, herbivore, hot) → 1 time (rabbit)
+      * (4, omnivore, hot) → 1 time (fox)
+      * (4, carnivore, hot) → 1 time (platypus)
+      * (2, omnivore, hot) → 1 time (human)
+
+    No combination appears more than once.
+
+ 2.
+
+    *(legs count, diet, body hair):*
+
+      * (4, herbivore, yes) → 1 time (rabbit)
+      * (4, omnivore, yes) → 1 time (fox)
+      * (4, carnivore, yes) → 1 time (platypus)
+      * (2, omnivore, yes) → 1 time (human)
+
+    No combination appears more than once.
+
+ 3.
+
+    *(legs count, diet, eggs):*
+
+      * (4, herbivore, false) → 1 time (rabbit)
+      * (4, omnivore, false) → 1 time (fox)
+      * (4, carnivore, true) → 1 time (platypus)
+      * (2, omnivore, false) → 1 time (human)
+
+    No combination appears more than once.
+
+ 4.
+
+    *(legs count, diet, breastfeeding):*
+
+      * (4, herbivore, indeed) → 1 time (rabbit)
+      * (4, omnivore, indeed) → 1 time (fox)
+      * (4, carnivore, indeed) → 1 time (platypus)
+      * (2, omnivore, indeed) → 1 time (human)
+
+    No combination appears more than once.
+
+ 5.
+
+    *(legs count, blood, body hair):*
+
+      * (4, hot, yes) → 3 times (rabbit, fox, platypus)
+      * (2, hot, yes) → 1 time (human)
+
+    Only (4, hot, yes) appears at least twice.
+
+ 6.
+
+    *(legs count, blood, eggs):*
+
+      * (4, hot, false) → 2 times (rabbit, fox)
+      * (4, hot, true) → 1 time (platypus)
+      * (2, hot, false) → 1 time (human)
+
+    Only (4, hot, false) appears at least twice.
+
+ 7.
+
+    *(legs count, blood, breastfeeding):*
+
+      * (4, hot, indeed) → 3 times (rabbit, fox, platypus)
+      * (2, hot, indeed) → 1 time (human)
+
+    Only (4, hot, indeed) appears at least twice.
+
+ 8.
+
+    *(legs count, body hair, eggs):*
+
+      * (4, yes, false) → 2 times (rabbit, fox)
+      * (4, yes, true) → 1 time (platypus)
+      * (2, yes, false) → 1 time (human)
+
+    Only (4, yes, false) appears at least twice.
+
+ 9.
+
+    *(legs count, body hair, breastfeeding):*
+
+      * (4, yes, indeed) → 3 times (rabbit, fox, platypus)
+      * (2, yes, indeed) → 1 time (human)
+
+    Only (4, yes, indeed) appears at least twice.
+
+10.
+
+    *(legs count, eggs, breastfeeding):*
+
+      * (4, false, indeed) → 2 times (rabbit, fox)
+      * (4, true, indeed) → 1 time (platypus)
+      * (2, false, indeed) → 1 time (human)
+
+    Only (4, false, indeed) appears at least twice.
+
+11.
+
+    *(diet, blood, body hair):*
+
+      * (herbivore, hot, yes) → 1 time (rabbit)
+      * (omnivore, hot, yes) → 2 times (human, fox)
+      * (carnivore, hot, yes) → 1 time (platypus)
+
+    Only (omnivore, hot, yes) appears at least twice.
+
+12.
+
+    *(diet, blood, eggs):*
+
+      * (herbivore, hot, false) → 1 time (rabbit)
+      * (omnivore, hot, false) → 2 times (human, fox)
+      * (carnivore, hot, true) → 1 time (platypus)
+
+    Only (omnivore, hot, false) appears at least twice.
+
+13.
+
+    *(diet, blood, breastfeeding):*
+
+      * (herbivore, hot, indeed) → 1 time (rabbit)
+      * (omnivore, hot, indeed) → 2 times (human, fox)
+      * (carnivore, hot, indeed) → 1 time (platypus)
+
+    Only (omnivore, hot, indeed) appears at least twice.
+
+14.
+
+    *(diet, body hair, eggs):*
+
+      * (herbivore, yes, false) → 1 time (rabbit)
+      * (omnivore, yes, false) → 2 times (human, fox)
+      * (carnivore, yes, true) → 1 time (platypus)
+
+    Only (omnivore, yes, false) appears at least twice.
+
+15.
+
+    *(diet, body hair, breastfeeding):*
+
+      * (herbivore, yes, indeed) → 1 time (rabbit)
+      * (omnivore, yes, indeed) → 2 times (human, fox)
+      * (carnivore, yes, indeed) → 1 time (platypus)
+
+    Only (omnivore, yes, indeed) appears at least twice.
+
+16.
+
+    *(diet, eggs, breastfeeding):*
+
+      * (herbivore, false, indeed) → 1 time (rabbit)
+      * (omnivore, false, indeed) → 2 times (human, fox)
+      * (carnivore, true, indeed) → 1 time (platypus)
+
+    Only (omnivore, false, indeed) appears at least twice.
+
+17.
+
+    *(blood, body hair, eggs):*
+
+      * (hot, yes, false) → 3 times (rabbit, human, fox)
+      * (hot, yes, true) → 1 time (platypus)
+
+    Only (hot, yes, false) appears at least twice.
+
+18.
+
+    *(blood, body hair, breastfeeding):*
+
+      * (hot, yes, indeed) → 4 times (all animals)
+
+    This appears at least twice.
+
+19.
+
+    *(blood, eggs, breastfeeding):*
+
+      * (hot, false, indeed) → 3 times (rabbit, human, fox)
+      * (hot, true, indeed) → 1 time (platypus)
+
+    Only (hot, false, indeed) appears at least twice.
+
+20.
+
+    *(body hair, eggs, breastfeeding):*
+
+      * (yes, false, indeed) → 3 times (rabbit, human, fox)
+      * (yes, true, indeed) → 1 time (platypus)
+
+    Only (yes, false, indeed) appears at least twice.
+
+
+      Frequent Itemsets with Minimal Support of 2 and Length 3:
+
+
+
+|set_length3 = {{"4", "hot", "yes"}, {"4", "hot", "false"}, {"4", "hot", "indeed"}, {"4", "yes", "false"}, {"4", "yes", "indeed"}, {"4", "false", "indeed"}, {"omnivore", "hot", "yes"}, {"omnivore", "hot", "false"}, {"omnivore", "hot", "indeed"}, {"omnivore", "yes", "false"}, {"omnivore", "yes", "indeed"}, {"omnivore", "false", "indeed"}, {"hot", "yes", "false"}, {"hot", "yes", "indeed"}, {"hot", "false", "indeed"}, {"yes", "false", "indeed"}}
+|
+
+These itemsets have a support of at least 2 and a length of 3.
+
+
+-----------------------------------------------------------------------------------------------------------------
+Find all frequent itemsets with minimal support equal to 2 and length 4, so set_length4= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+
+
+ChatGPT
+
+To find all frequent itemsets with a minimal support of 2 and length 4,
+we need to consider combinations of four items and check how many times
+each combination appears in the dataset. Only combinations that appear
+at least twice will be included.
+
+
+      Dataset Recap:
+
+
+
+|name        legs count  diet      blood  body hair  eggs   breastfeeding
+rabbit      4           herbivore hot    yes        false  indeed
+human       2           omnivore  hot    yes        false  indeed
+fox         4           omnivore  hot    yes        false  indeed
+platypus    4           carnivore hot    yes        true   indeed
+|
+
+
+      Possible Combinations of Length 4:
+
+ 1.
+
+    *(legs count, diet, blood, body hair):*
+
+      * (4, herbivore, hot, yes) → 1 time (rabbit)
+      * (4, omnivore, hot, yes) → 1 time (fox)
+      * (4, carnivore, hot, yes) → 1 time (platypus)
+      * (2, omnivore, hot, yes) → 1 time (human)
+
+    No combination appears more than once.
+
+ 2.
+
+    *(legs count, diet, blood, eggs):*
+
+      * (4, herbivore, hot, false) → 1 time (rabbit)
+      * (4, omnivore, hot, false) → 1 time (fox)
+      * (4, carnivore, hot, true) → 1 time (platypus)
+      * (2, omnivore, hot, false) → 1 time (human)
+
+    No combination appears more than once.
+
+ 3.
+
+    *(legs count, diet, blood, breastfeeding):*
+
+      * (4, herbivore, hot, indeed) → 1 time (rabbit)
+      * (4, omnivore, hot, indeed) → 1 time (fox)
+      * (4, carnivore, hot, indeed) → 1 time (platypus)
+      * (2, omnivore, hot, indeed) → 1 time (human)
+
+    No combination appears more than once.
+
+ 4.
+
+    *(legs count, diet, body hair, eggs):*
+
+      * (4, herbivore, yes, false) → 1 time (rabbit)
+      * (4, omnivore, yes, false) → 1 time (fox)
+      * (4, carnivore, yes, true) → 1 time (platypus)
+      * (2, omnivore, yes, false) → 1 time (human)
+
+    No combination appears more than once.
+
+ 5.
+
+    *(legs count, diet, body hair, breastfeeding):*
+
+      * (4, herbivore, yes, indeed) → 1 time (rabbit)
+      * (4, omnivore, yes, indeed) → 1 time (fox)
+      * (4, carnivore, yes, indeed) → 1 time (platypus)
+      * (2, omnivore, yes, indeed) → 1 time (human)
+
+    No combination appears more than once.
+
+ 6.
+
+    *(legs count, diet, eggs, breastfeeding):*
+
+      * (4, herbivore, false, indeed) → 1 time (rabbit)
+      * (4, omnivore, false, indeed) → 1 time (fox)
+      * (4, carnivore, true, indeed) → 1 time (platypus)
+      * (2, omnivore, false, indeed) → 1 time (human)
+
+    No combination appears more than once.
+
+ 7.
+
+    *(legs count, blood, body hair, eggs):*
+
+      * (4, hot, yes, false) → 2 times (rabbit, fox)
+      * (4, hot, yes, true) → 1 time (platypus)
+      * (2, hot, yes, false) → 1 time (human)
+
+    Only (4, hot, yes, false) appears at least twice.
+
+ 8.
+
+    *(legs count, blood, body hair, breastfeeding):*
+
+      * (4, hot, yes, indeed) → 3 times (rabbit, fox, platypus)
+      * (2, hot, yes, indeed) → 1 time (human)
+
+    Only (4, hot, yes, indeed) appears at least twice.
+
+ 9.
+
+    *(legs count, blood, eggs, breastfeeding):*
+
+      * (4, hot, false, indeed) → 2 times (rabbit, fox)
+      * (4, hot, true, indeed) → 1 time (platypus)
+      * (2, hot, false, indeed) → 1 time (human)
+
+    Only (4, hot, false, indeed) appears at least twice.
+
+10.
+
+    *(legs count, body hair, eggs, breastfeeding):*
+
+      * (4, yes, false, indeed) → 2 times (rabbit, fox)
+      * (4, yes, true, indeed) → 1 time (platypus)
+      * (2, yes, false, indeed) → 1 time (human)
+
+    Only (4, yes, false, indeed) appears at least twice.
+
+11.
+
+    *(diet, blood, body hair, eggs):*
+
+      * (herbivore, hot, yes, false) → 1 time (rabbit)
+      * (omnivore, hot, yes, false) → 2 times (human, fox)
+      * (carnivore, hot, yes, true) → 1 time (platypus)
+
+    Only (omnivore, hot, yes, false) appears at least twice.
+
+12.
+
+    *(diet, blood, body hair, breastfeeding):*
+
+      * (herbivore, hot, yes, indeed) → 1 time (rabbit)
+      * (omnivore, hot, yes, indeed) → 2 times (human, fox)
+      * (carnivore, hot, yes, indeed) → 1 time (platypus)
+
+    Only (omnivore, hot, yes, indeed) appears at least twice.
+
+13.
+
+    *(diet, blood, eggs, breastfeeding):*
+
+      * (herbivore, hot, false, indeed) → 1 time (rabbit)
+      * (omnivore, hot, false, indeed) → 2 times (human, fox)
+      * (carnivore, hot, true, indeed) → 1 time (platypus)
+
+    Only (omnivore, hot, false, indeed) appears at least twice.
+
+14.
+
+    *(diet, body hair, eggs, breastfeeding):*
+
+      * (herbivore, yes, false, indeed) → 1 time (rabbit)
+      * (omnivore, yes, false, indeed) → 2 times (human, fox)
+      * (carnivore, yes, true, indeed) → 1 time (platypus)
+
+    Only (omnivore, yes, false, indeed) appears at least twice.
+
+15.
+
+    *(blood, body hair, eggs, breastfeeding):*
+
+      * (hot, yes, false, indeed) → 3 times (rabbit, human, fox)
+      * (hot, yes, true, indeed) → 1 time (platypus)
+
+    Only (hot, yes, false, indeed) appears at least twice.
+
+
+      Frequent Itemsets with Minimal Support of 2 and Length 4:
+
+
+
+|set_length4 = {{"4", "hot", "yes", "false"}, {"4", "hot", "yes", "indeed"}, {"4", "hot", "false", "indeed"}, {"4", "yes", "false", "indeed"}, {"omnivore", "hot", "yes", "false"}, {"omnivore", "hot", "yes", "indeed"}, {"omnivore", "hot", "false", "indeed"}, {"omnivore", "yes", "false", "indeed"}, {"hot", "yes", "false", "indeed"}}
+|
+
+These itemsets have a support of at least 2 and a length of 4.
+
+
+-----------------------------------------------------------------------------------------------------------------
+Find all frequent itemsets with minimal support equal to 2 and length 5, so set_length5= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+
+
+ChatGPT
+
+To find all frequent itemsets with a minimal support of 2 and length 5,
+we need to examine combinations of five items in the dataset and
+determine how many times each combination appears. We will only consider
+combinations that appear at least twice.
+
+
+      Dataset Recap:
+
+
+
+|name        legs count  diet      blood  body hair  eggs   breastfeeding
+rabbit      4           herbivore hot    yes        false  indeed
+human       2           omnivore  hot    yes        false  indeed
+fox         4           omnivore  hot    yes        false  indeed
+platypus    4           carnivore hot    yes        true   indeed
+|
+
+
+      Possible Combinations of Length 5:
+
+ 1.
+
+    *(legs count, diet, blood, body hair, eggs):*
+
+      * (4, herbivore, hot, yes, false) → 1 time (rabbit)
+      * (4, omnivore, hot, yes, false) → 1 time (fox)
+      * (4, carnivore, hot, yes, true) → 1 time (platypus)
+      * (2, omnivore, hot, yes, false) → 1 time (human)
+
+    No combination appears more than once.
+
+ 2.
+
+    *(legs count, diet, blood, body hair, breastfeeding):*
+
+      * (4, herbivore, hot, yes, indeed) → 1 time (rabbit)
+      * (4, omnivore, hot, yes, indeed) → 1 time (fox)
+      * (4, carnivore, hot, yes, indeed) → 1 time (platypus)
+      * (2, omnivore, hot, yes, indeed) → 1 time (human)
+
+    No combination appears more than once.
+
+ 3.
+
+    *(legs count, diet, blood, eggs, breastfeeding):*
+
+      * (4, herbivore, hot, false, indeed) → 1 time (rabbit)
+      * (4, omnivore, hot, false, indeed) → 1 time (fox)
+      * (4, carnivore, hot, true, indeed) → 1 time (platypus)
+      * (2, omnivore, hot, false, indeed) → 1 time (human)
+
+    No combination appears more than once.
+
+ 4.
+
+    *(legs count, diet, body hair, eggs, breastfeeding):*
+
+      * (4, herbivore, yes, false, indeed) → 1 time (rabbit)
+      * (4, omnivore, yes, false, indeed) → 1 time (fox)
+      * (4, carnivore, yes, true, indeed) → 1 time (platypus)
+      * (2, omnivore, yes, false, indeed) → 1 time (human)
+
+    No combination appears more than once.
+
+ 5.
+
+    *(legs count, blood, body hair, eggs, breastfeeding):*
+
+      * (4, hot, yes, false, indeed) → 2 times (rabbit, fox)
+      * (4, hot, yes, true, indeed) → 1 time (platypus)
+      * (2, hot, yes, false, indeed) → 1 time (human)
+
+    Only (4, hot, yes, false, indeed) appears at least twice.
+
+ 6.
+
+    *(diet, blood, body hair, eggs, breastfeeding):*
+
+      * (herbivore, hot, yes, false, indeed) → 1 time (rabbit)
+      * (omnivore, hot, yes, false, indeed) → 2 times (human, fox)
+      * (carnivore, hot, yes, true, indeed) → 1 time (platypus)
+
+    Only (omnivore, hot, yes, false, indeed) appears at least twice.
+
+
+      Frequent Itemsets with Minimal Support of 2 and Length 5:
+
+
+
+|set_length5 = {{"4", "hot", "yes", "false", "indeed"}, {"omnivore", "hot", "yes", "false", "indeed"}}
+|
+

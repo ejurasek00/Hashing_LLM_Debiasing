@@ -1,0 +1,13 @@
+== GOLD FALSE ==
+
+
+{"6"},{"cold"},{"no"},{"true"},{"negative"},{"herbivore"}
+
+
+{"6", "cold"},{"6", "no"},{"6", "true"},{"6", "negative"},{"cold", "no"},{"cold", "true"},{"cold", "negative"},{"cold", "herbivore"},{"no", "true"},{"negative", "no"},{"herbivore", "no"},{"negative", "true"},{"herbivore", "true"},{"herbivore", "negative"}
+
+{"6", "cold", "no"},{"6", "cold", "true"},{"6", "cold", "negative"},{"6", "no", "true"},{"6", "negative", "no"},{"6", "negative", "true"},{"cold", "no", "true"},{"cold", "negative", "no"},{"cold", "herbivore", "no"},{"cold", "negative", "true"},{"cold", "herbivore", "true"},{"cold", "herbivore", "negative"},{"negative", "no", "true"},{"herbivore", "no", "true"},{"herbivore", "negative", "no"},{"herbivore", "negative", "true"}
+
+{"6", "cold", "no", "true"},{"6", "cold", "negative", "no"},{"6", "cold", "negative", "true"},{"6", "negative", "no", "true"},{"cold", "negative", "no", "true"},{"cold", "herbivore", "no", "true"},{"cold", "herbivore", "negative", "no"},{"cold", "herbivore", "negative", "true"},{"herbivore", "negative", "no", "true"}
+
+{"6", "cold", "negative", "no", "true"},{"cold", "herbivore", "negative", "no", "true"}
