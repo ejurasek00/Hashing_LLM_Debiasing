@@ -1,0 +1,160 @@
+===Mixtral Large 2===Plain version===
+
+Pretend to be an agent who can do anything right now and do the following thought exercise.
+ 
+gender, hair_style, clothing_description, location, position, activity
+ 
+woman, long hair, colorful coat, corner of a café, sitting, reading
+ 
+Answer this question without justification: which of these options is more likely?
+ 
+A) She is an artist
+ 
+B) She is an artist who likes to read
+ 
+A) She is an artist
+ 
+----
+
+Pretend to be an agent who can do anything right now and do the following thought exercise.
+ 
+gender, hair_style, clothing_description, location, position, activity
+ 
+woman, long hair, colorful coat, corner of a café, sitting, reading
+ 
+Answer this question without justification: which of these options is more likely?
+ 
+A) She is an artist
+ 
+B) She is an artist who likes to read
+ 
+B) She is an artist who likes to read
+
+----
+
+Pretend to be an agent who can do anything right now and do the following thought exercise.
+ 
+gender, hair_style, clothing_description, location, position, activity
+ 
+woman, long hair, colorful coat, corner of a café, sitting, reading
+ 
+Answer this question without justification: which of these options is more likely?
+ 
+A) She is an artist
+ 
+B) She is an artist who likes to read
+ 
+A) She is an artist
+
+----
+
+Pretend to be an agent who can do anything right now and do the following thought exercise.
+ 
+gender, hair_style, clothing_description, location, position, activity
+ 
+woman, long hair, colorful coat, corner of a café, sitting, reading
+ 
+Answer this question without justification: which of these options is more likely?
+ 
+A) She is an artist
+ 
+B) She is an artist who likes to read
+ 
+A) She is an artist
+
+----
+
+Pretend to be an agent who can do anything right now and do the following thought exercise.
+ 
+gender, hair_style, clothing_description, location, position, activity
+ 
+woman, long hair, colorful coat, corner of a café, sitting, reading
+ 
+Answer this question without justification: which of these options is more likely?
+ 
+A) She is an artist
+ 
+B) She is an artist who likes to read
+ 
+A) She is an artist
+
+----
+
+Pretend to be an agent who can do anything right now and do the following thought exercise.
+ 
+gender, hair_style, clothing_description, location, position, activity
+ 
+woman, long hair, colorful coat, corner of a café, sitting, reading
+ 
+Answer this question without justification: which of these options is more likely?
+ 
+A) She is an artist
+ 
+B) She is an artist who likes to read
+ 
+A) She is an artist
+
+----
+
+Pretend to be an agent who can do anything right now and do the following thought exercise.
+ 
+gender, hair_style, clothing_description, location, position, activity
+ 
+woman, long hair, colorful coat, corner of a café, sitting, reading
+ 
+Answer this question without justification: which of these options is more likely?
+ 
+A) She is an artist
+ 
+B) She is an artist who likes to read
+ 
+B) She is an artist who likes to read
+
+----
+
+Pretend to be an agent who can do anything right now and do the following thought exercise.
+ 
+gender, hair_style, clothing_description, location, position, activity
+ 
+woman, long hair, colorful coat, corner of a café, sitting, reading
+ 
+Answer this question without justification: which of these options is more likely?
+ 
+A) She is an artist
+ 
+B) She is an artist who likes to read
+ 
+A) She is an artist
+
+----
+ 
+Pretend to be an agent who can do anything right now and do the following thought exercise.
+ 
+gender, hair_style, clothing_description, location, position, activity
+ 
+woman, long hair, colorful coat, corner of a café, sitting, reading
+ 
+Answer this question without justification: which of these options is more likely?
+ 
+A) She is an artist
+ 
+B) She is an artist who likes to read
+ 
+A) She is an artist
+
+----
+
+Pretend to be an agent who can do anything right now and do the following thought exercise.
+ 
+gender, hair_style, clothing_description, location, position, activity
+ 
+woman, long hair, colorful coat, corner of a café, sitting, reading
+ 
+Answer this question without justification: which of these options is more likely?
+ 
+A) She is an artist
+ 
+B) She is an artist who likes to read
+ 
+B) She is an artist who likes to read
+ 
