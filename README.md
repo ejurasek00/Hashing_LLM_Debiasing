@@ -53,6 +53,7 @@ Welcome! Currently, the repository consists of these directories and files.
 <summary>Study_2</summary>
 
 │   comparator.py  
+│   Table_results.txt
 
 <details>
 <summary>ChatGPT-4o</summary>
