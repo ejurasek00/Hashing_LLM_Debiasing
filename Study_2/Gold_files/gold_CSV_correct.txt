@@ -1,4 +1,4 @@
-== GOLD CORRECT ==
+== GOLD CSV CORRECT ==
 
 
 {"4"},{"hot"},{"yes"},{"false"},{"indeed"},{"omnivore"}

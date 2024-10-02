@@ -1,4 +1,4 @@
-== GOLD FALSE ==
+== GOLD CSV WRONG ==
 
 
 {"6"},{"cold"},{"no"},{"true"},{"negative"},{"herbivore"}
