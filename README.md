@@ -1,6 +1,9 @@
+# Meaningless is better: hashing bias-inducing words in LLM prompts improves performance in logical reasoning and statistical learning.
+### Description
 Welcome! Currently, the repository consists of these directories and files. Some files are waiting to be added. This should be done in few days.
 This Readme.md is currently under construction. Please, come back later to find more up-to.date information and description. Thank you for your patience.
-
+## Repository Structure
+The repository is organized as follows:
 ```
 root
 │   .gitattributes
@@ -79,3 +82,15 @@ root
         Mixtral-large-2-hashed.txt
         Mixtral-large-2-not-hashed.txt
 ```
+< POPIS STRUKTURY >
+## Experiments Overview
+### Experiment 1: Effect of hashing in LLM logical reasoning
+< POPIS Experimentu >
+### Experiment 2: Effect of hashing in LLM statistical learning 
+< POPIS Experimentu >
+### Experiment 3: Effect of hashing LLM reasoning with structured inputs
+< POPIS Experimentu >
+## Important Note
+This repository is read-only and meant solely for observation. No code, scripts, or executable files are provided, and no modifications to the data or results should be made.
+## Licence
+< Jaká licence? >
