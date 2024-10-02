@@ -3,7 +3,7 @@
 This repository contains the results and code from experiments conducted for the paper: **"Meaningless is better: hashing bias-inducing words in LLM prompts improves performance in logical reasoning and statistical learning."**
 The repository is organized into multiple experiments, each containing results (in PDF or text format), and, where applicable, Python code used to process and compare the results.
 ## Repository Structure
-The repository is organized as follows:
+The repository is organized into separate Experiment folders, each containing the results and, where applicable, Python code used for processing. The structure is as follows:
 ```
 root
 │   .gitattributes
