@@ -52,7 +52,7 @@ root
 │   ├───Gold_files
 │   │       gold_CSV_correct.txt
 │   │       gold_CSV_wrong.txt
-│   │       gold_hashed.txt
+│   │       gold_CSV_hashed.txt
 │   │
 │   └───LLAMA-3-1-405b-instruct
 │           c1.txt
