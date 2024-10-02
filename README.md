@@ -1,7 +1,7 @@
 # Meaningless is better: hashing bias-inducing words in LLM prompts improves performance in logical reasoning and statistical learning.
 ### Description
-Welcome! Currently, the repository consists of these directories and files. Some files are waiting to be added. This should be done in few days.
-This Readme.md is currently under construction. Please, come back later to find more up-to.date information and description. Thank you for your patience.
+This repository contains the results and code from experiments conducted for the paper: **"Meaningless is better: hashing bias-inducing words in LLM prompts improves performance in logical reasoning and statistical learning."**
+The repository is organized into multiple experiments, each containing results (in PDF or text format), and, where applicable, Python code used to process and compare the results.
 ## Repository Structure
 The repository is organized as follows:
 ```
@@ -85,11 +85,22 @@ root
 < POPIS STRUKTURY >
 ## Experiments Overview
 ### Experiment 1: Effect of hashing in LLM logical reasoning
-< POPIS Experimentu >
+**Objective:** This experiment focuses on testing variation on Linda problem on large language models (GPT-3.5, GPT-4, Gemini and Llama 2) and the hashing method proposed in the study.
+
+**Data:** The folder contains PDFs with results from each model (GPT-3.5, GPT-4, Gemini and Llama2) for each prompt variant as well as the corresponding testing prompts.
+
 ### Experiment 2: Effect of hashing in LLM statistical learning 
-< POPIS Experimentu >
+**Objective:** 
+
+**Data:** 
+
+**Code:**
+
 ### Experiment 3: Effect of hashing LLM reasoning with structured inputs
-< POPIS Experimentu >
+**Objective:** 
+
+**Data:**
+
 ## Important Note
 This repository is read-only and meant solely for observation. No code, scripts, or executable files are provided, and no modifications to the data or results should be made.
 ## Licence
