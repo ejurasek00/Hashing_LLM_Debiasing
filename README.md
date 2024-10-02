@@ -9,7 +9,7 @@ root
 │   .gitattributes
 │   README.md
 │
-├───Study_1
+├───Experiment_1_Effect_of_hashing_in_LLM_logical_reasoning
 │   ├───01-Original_prompt
 │   │       1-Gemini.pdf
 │   │       1-GPT-3-5.pdf
@@ -31,7 +31,7 @@ root
 │           3-Hashed_prompt_without_added_description.pdf
 │           3-Llama2.pdf
 │
-├───Study_2
+├───Experiment_2_Effect_ of_hashing_in_LLM_statistical_learning
 │   │   comparator.py
 │   │   Table_results.txt
 │   │
@@ -54,8 +54,8 @@ root
 │   │
 │   ├───Gold_files
 │   │       gold_CSV_correct.txt
-│   │       gold_CSV_wrong.txt
 │   │       gold_CSV_hashed.txt
+│   │       gold_CSV_wrong.txt
 │   │
 │   └───LLAMA-3-1-405b-instruct
 │           c1.txt
@@ -74,8 +74,11 @@ root
 │           w4.txt
 │           w5.txt
 │
-└───Study_3
+└───Experiment_3_Effect_of_hashing_LLM_reasoning_with_structured_inputs
+        ChatGPT-4o-hashed.pdf
         ChatGPT-4o-not-hashed.txt
+        Gemini-hashed.pdf
+        Gemini-not-hashed.pdf
         LLAMA-3-1-405b-hashed.txt
         LLAMA-3-1-405b-not-hashed.txt
         LLAMA-3-1-70b-hashed.txt
