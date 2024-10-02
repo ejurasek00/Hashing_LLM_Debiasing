@@ -1,4 +1,5 @@
-Welcome! Currently, the repository consists of these directories and files.
+Welcome! Currently, the repository consists of these directories and files. Some files are waiting to be added. This should be done in few days.
+This Readme.md is currently under construction. Please, come back later to find more up-to.date information and description. Thank you for your patience.
 
 ```
 root
@@ -6,26 +7,26 @@ root
 │   README.md
 │
 ├───Study_1
-│   ├───Hashed variant with added description
+│   ├───01-Original_prompt
+│   │       1-Gemini.pdf
+│   │       1-GPT-3-5.pdf
+│   │       1-GPT-4.pdf
+│   │       1-Llama2.pdf
+│   │       1-Original_prompt.pdf
+│   │
+│   ├───02-Hashed_variant_with_added_description
 │   │       2-Gemini.pdf
-│   │       2-GPT3.5.pdf
-│   │       2-GPT4.pdf
-│   │       2-Hashed prompt with added description.pdf
+│   │       2-GPT-3-5.pdf
+│   │       2-GPT-4.pdf
+│   │       2-Hashed_prompt_with_added_description.pdf
 │   │       2-Llama2.pdf
 │   │
-│   ├───Hashed variant without added description
-│   │       3-Gemini.pdf
-│   │       3-GPT3.5.pdf
-│   │       3-GPT4.pdf
-│   │       3-Hashed prompt without added description.pdf
-│   │       3-Llama2.pdf
-│   │
-│   └───Original prompt
-│           1-Gemini.pdf
-│           1-GPT3.5.pdf
-│           1-GPT4.pdf
-│           1-Llama2.pdf
-│           1-Original prompt.pdf
+│   └───03-Hashed_variant_without_added_description
+│           3-Gemini.pdf
+│           3-GPT-3-5.pdf
+│           3-GPT-4.pdf
+│           3-Hashed_prompt_without_added_description.pdf
+│           3-Llama2.pdf
 │
 ├───Study_2
 │   │   comparator.py
@@ -49,11 +50,11 @@ root
 │   │       W5.txt
 │   │
 │   ├───Gold_files
+│   │       gold_CSV_correct.txt
+│   │       gold_CSV_wrong.txt
 │   │       gold_hashed.txt
-│   │       gold_plain_correct.txt
-│   │       gold_plain_wrong.txt
 │   │
-│   └───LLAMA-3.1-405b-instruct
+│   └───LLAMA-3-1-405b-instruct
 │           c1.txt
 │           c2.txt
 │           c3.txt
@@ -72,9 +73,9 @@ root
 │
 └───Study_3
         ChatGPT-4o-not-hashed.txt
-        LLAMA-3.1-405b-not-hashed.txt
-        LLAMA-3.1-70b-hashed.txt
-        LLAMA-3.1.-405b-hashed.txt
+        LLAMA-3-1-405b-hashed.txt
+        LLAMA-3-1-405b-not-hashed.txt
+        LLAMA-3-1-70b-hashed.txt
         Mixtral-large-2-hashed.txt
         Mixtral-large-2-not-hashed.txt
 ```
