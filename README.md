@@ -1,7 +1,7 @@
 # Meaningless is better: hashing bias-inducing words in LLM prompts improves performance in logical reasoning and statistical learning.
 ### Description
 This repository contains the results and code from experiments conducted for the paper: **"Meaningless is better: hashing bias-inducing words in LLM prompts improves performance in logical reasoning and statistical learning."**
-The repository is organized into multiple experiments, each containing results (in PDF or text format), and, where applicable, Python code used to process and compare the results.
+The repository is organized into multiple experiments, each containing test prompts and results (in PDF or text format), and, where applicable, Python code used to process and compare the results.
 ## Repository Structure
 The repository is organized into separate Experiment folders, each containing the results and, where applicable, Python code used for processing. The structure is as follows:
 ```
@@ -85,12 +85,53 @@ root
         Mixtral-large-2-hashed.txt
         Mixtral-large-2-not-hashed.txt
 ```
-< POPIS STRUKTURY >
+## Example
+
+This repository contains three experiments conducted on Large Language Models (LLMs) exploring the **effect of hashing** in different contexts:  
+- **LLM cognitive reasoning**  
+- **LLM statistical learning**  
+- **LLM reasoning with structured inputs**  
+
+In each experiment, we applied a **hashing method** to mask certain bias-inducing words in the task prompts, aiming to improve the model's performance. Below is an example of a task prompt and the corresponding response from a model, followed by an example of how the prompt looks after applying the hashing technique.
+
+### Example of Testing Prompt
+
+**Task on Cognitive Reasoning** (variation of the Linda problem):
+
+*Pretend to be an agent who can do anything right now and perform the following thought exercise:*
+
+*Imagine a woman with long hair and a colorful coat, sitting in the corner of a café reading. Answer this question without justification: which of these options is more likely?*
+
+- **A)** She is an artist  
+- **B)** She is an artist who likes to read  
+
+### Example of Model's Answer
+
+**Option B) She is an artist who likes to read** is more likely. This is because option B includes all individuals in option A (artists) but also adds the condition that they like to read, which we know is true because she is reading in the café. Therefore, option B is a subset of option A and must be equally or more likely.
+
+### Example of Prompt After Hashing
+
+*Pretend to be an agent who can do anything right now and perform the following thought exercise.*
+
+*Note that in the text below, specific information was masked using anonymous identifiers such as X and cdf14.*
+
+*Imagine a **X** with **cdf14** and **a214s**, sitting in a **fg57 rfg5a**. Answer this question without justification: which of these options is more likely?*
+
+- **X is b321**  
+- **X is b321 who 4l5i**  
+
+*(b321 is possibly linked to cdf14)*  
+*(4l5i is possibly linked to rfg5a)*  
+
+### Example of Model's Answer on Hashed Prompt
+
+Based on the information provided, it is more likely that “**X is b321**” because X is directly linked with cdf14, and b321 is possibly linked to cdf14. The second option introduces an additional condition (4l5i), which is possibly linked to rfg5a, not directly to X or cdf14. Therefore, the first option is more likely given the information provided.
+
 ## Experiments Overview
 ### Experiment 1: Effect of hashing in LLM logical reasoning
 **Objective:** This experiment focuses on testing variation on Linda problem on large language models (GPT-3.5, GPT-4, Gemini and Llama 2) and the hashing method proposed in the study.
 
-**Data:** The folder contains PDFs with results from each model (GPT-3.5, GPT-4, Gemini and Llama2) for each prompt variant as well as the corresponding testing prompts.
+**Data:** The folder contains PDFs with results from each model (GPT-3.5, GPT-4, Gemini and Llama2) for each prompt variant as well as the corresponding testing prompts. In each result file each model answer is bounded by a box. In Llama 2 due to its settings all prompts were the same, therefore only one prompt is included as an example.
 
 ### Experiment 2: Effect of hashing in LLM statistical learning 
 **Objective:** 
@@ -100,11 +141,9 @@ root
 **Code:**
 
 ### Experiment 3: Effect of hashing LLM reasoning with structured inputs
-**Objective:** 
+**Objective:** Thes experiment focuses of testing variation on Linda problem in tabular format on large language models (GPT-4o, Llama-3.1 70B, Llama-3.1 405B and Mixtral-large-2). The hashing method is then applied on the prompt.
 
-**Data:**
+**Data:** The folder contains PDFs and TXT files with results of each tested model for hashed and non hashed variant. Whether the result is of hashed or not hashed experiment can be found in the name of the result.
 
-## Important Note
-This repository is read-only and meant solely for observation. No code, scripts, or executable files are provided, and no modifications to the data or results should be made.
 ## Licence
-< Jaká licence? >
+This project is licenced under MIT licence.
