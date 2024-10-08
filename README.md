@@ -134,11 +134,11 @@ Based on the information provided, it is more likely that “**X is b321**” be
 **Data:** The folder contains PDFs with results from each model (GPT-3.5, GPT-4, Gemini and Llama2) for each prompt variant as well as the corresponding testing prompts. In each result file each model answer is bounded by a box. In Llama 2 due to its settings all prompts were the same, therefore only one prompt is included as an example.
 
 ### Experiment 2: Effect of hashing in LLM statistical learning 
-**Objective:** 
+**Objective:** TBA
 
-**Data:** 
+**Data:** TBA
 
-**Code:**
+**Code:** TBA
 
 ### Experiment 3: Effect of hashing LLM reasoning with structured inputs
 **Objective:** Thes experiment focuses of testing variation on Linda problem in tabular format on large language models (GPT-4o, Llama-3.1 70B, Llama-3.1 405B and Mixtral-large-2). The hashing method is then applied on the prompt.
