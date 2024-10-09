@@ -138,7 +138,7 @@ Based on the information provided, it is more likely that “**X is b321**” be
 
 **Data:** TBA
 
-**Code:** TBA
+**Code:** The code in Python serves as a tool to compare the actual results of LLMs and the results LLMs should ideally find (called gold). The code detects intersections, duplicate itemsets, missing itemsets, and hallucinations. 
 
 ### Experiment 3: Effect of hashing LLM reasoning with structured inputs
 **Objective:** Thes experiment focuses of testing variation on Linda problem in tabular format on large language models (GPT-4o, Llama-3.1 70B, Llama-3.1 405B and Mixtral-large-2). The hashing method is then applied on the prompt.
