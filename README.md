@@ -134,7 +134,7 @@ Based on the information provided, it is more likely that “**X is b321**” be
 **Data:** The folder contains PDFs with results from each model (GPT-3.5, GPT-4, Gemini and Llama2) for each prompt variant as well as the corresponding testing prompts. In each result file each model answer is bounded by a box. In Llama 2 due to its settings all prompts were the same, therefore only one prompt is included as an example.
 
 ### Experiment 2: Effect of hashing in LLM statistical learning 
-**Objective:** TBA
+**Objective:** The experiment was focused on evaluating whether the proposed technique will improve LLM performance in the frequent itemsets mining task, which entails identifying all sets of items in a given dataset that appear together at least predefined number of times.
 
 **Data:** This directory contains trancriptions of the conversations with LLMs in a txt format divided in two subdirectories - one for each model (ChatGPT-4o and Llama-3.1 405B). The Gold_files subdirectory contains the results foud by the Apriori algorithm, used later as a reference for the LLMs' results analysis in Python. CSV files used in the prompts - CSV_correct, CSV_wrong and CSV_hashed can be found in the CSV_files subdirectory (to be added soon). The Experiment_2_Effect_ of_hashing_in_LLM_statistical_learning directory also contains a comparator tool in Python. More information can be found in the next paragraph.
 
