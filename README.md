@@ -136,7 +136,7 @@ Based on the information provided, it is more likely that “**X is b321**” be
 ### Experiment 2: Effect of hashing in LLM statistical learning 
 **Objective:** TBA
 
-**Data:** TBA
+**Data:** This directory contains trancriptions of the conversations with LLMs in a txt format divided in two subdirectories - one for each model (ChatGPT-4o and Llama-3.1 405B). The Gold_files subdirectory contains the results foud by the Apriori algorithm, used later as a reference for the LLMs' results analysis in Python. CSV files used in the prompts - CSV_correct, CSV_wrong and CSV_hashed can be found in the CSV_files subdirectory (to be added soon). The Experiment_2_Effect_ of_hashing_in_LLM_statistical_learning directory also contains a comparator tool in Python. More information can be found in the next paragraph.
 
 **Code:** The code in Python serves as a tool to compare the actual results of LLMs and the results LLMs should ideally find (called gold). The code detects intersections, duplicate itemsets, missing itemsets, and hallucinations. 
 
