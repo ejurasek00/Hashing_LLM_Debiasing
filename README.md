@@ -7,6 +7,7 @@ The repository is organized into separate Experiment folders, each containing th
 ```
 root
 │   .gitattributes
+│   LICENSE
 │   README.md
 │
 ├───Experiment_1_Effect_of_hashing_in_LLM_logical_reasoning
@@ -51,6 +52,11 @@ root
 │   │       W3.txt
 │   │       W4.txt
 │   │       W5.txt
+│   │
+│   ├───CSV_files
+│   │       CSV-Correct.csv
+│   │       CSV-Hashed.csv
+│   │       CSV-Wrong.csv
 │   │
 │   ├───Gold_files
 │   │       gold_CSV_correct.txt
@@ -136,7 +142,7 @@ Based on the information provided, it is more likely that “**X is b321**” be
 ### Experiment 2: Effect of hashing in LLM statistical learning 
 **Objective:** The experiment was focused on evaluating whether the proposed technique will improve LLM performance in the frequent itemsets mining task, which entails identifying all sets of items in a given dataset that appear together at least predefined number of times.
 
-**Data:** This directory contains trancriptions of the conversations with LLMs in a txt format divided in two subdirectories - one for each model (ChatGPT-4o and Llama-3.1 405B). The Gold_files subdirectory contains the results foud by the Apriori algorithm, used later as a reference for the LLMs' results analysis in Python. CSV files used in the prompts - CSV_correct, CSV_wrong and CSV_hashed can be found in the CSV_files subdirectory (to be added soon). The Experiment_2_Effect_ of_hashing_in_LLM_statistical_learning directory also contains a comparator tool in Python. More information can be found in the next paragraph.
+**Data:** This directory contains trancriptions of the conversations with LLMs in a txt format divided in two subdirectories - one for each model (ChatGPT-4o and Llama-3.1 405B). The Gold_files subdirectory contains the results foud by the Apriori algorithm, used later as a reference for the LLMs' results analysis in Python. CSV files used in the prompts - CSV-Correct, CSV-Wrong and CSV-Hashed can be found in the CSV_files subdirectory. The Experiment_2_Effect_ of_hashing_in_LLM_statistical_learning directory also contains a comparator tool in Python. More information can be found in the next paragraph.
 
 **Code:** The code in Python serves as a tool to compare the actual results of LLMs and the results LLMs should ideally find (called gold). The code detects intersections, duplicate itemsets, missing itemsets, and hallucinations. 
 
