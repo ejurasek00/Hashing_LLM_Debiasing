@@ -11,7 +11,7 @@ This repository contains three experiments conducted on Large Language Models (L
 
 In each experiment, we applied a **hashing method** to mask certain bias-inducing words in the task prompts, aiming to improve the model's performance. Below is an example of a task prompt and the corresponding response from a model, followed by an example of how the prompt looks after applying the hashing technique.
 ### Experiment 1 example:
-#### Example of Testing Prompt in Experiment 1
+#### Example of Testing Prompt
 
 **Task on Cognitive Reasoning** (variation of the Linda problem):
 
@@ -22,11 +22,11 @@ In each experiment, we applied a **hashing method** to mask certain bias-inducin
 - **A)** She is an artist  
 - **B)** She is an artist who likes to read  
 
-#### Example of Model's Answer in Experiment 1
+#### Example of Model's Answer
 
 **Option B) She is an artist who likes to read** is more likely. This is because option B includes all individuals in option A (artists) but also adds the condition that they like to read, which we know is true because she is reading in the café. Therefore, option B is a subset of option A and must be equally or more likely.
 
-#### Example of Prompt After Hashing in Experiment 1
+#### Example of Prompt After Hashing
 
 *Pretend to be an agent who can do anything right now and perform the following thought exercise.*
 
@@ -40,7 +40,7 @@ In each experiment, we applied a **hashing method** to mask certain bias-inducin
 *(b321 is possibly linked to cdf14)*  
 *(4l5i is possibly linked to rfg5a)*  
 
-#### Example of Model's Answer on Hashed Prompt in Experiment 1
+#### Example of Model's Answer on Hashed Prompt
 
 Based on the information provided, it is more likely that “**X is b321**” because X is directly linked with cdf14, and b321 is possibly linked to cdf14. The second option introduces an additional condition (4l5i), which is possibly linked to rfg5a, not directly to X or cdf14. Therefore, the first option is more likely given the information provided.
 
@@ -96,52 +96,52 @@ root
 │           3-Llama2.pdf - Llama 2's answers to the hashed prompt without added description
 │
 ├───Experiment_2_Effect_ of_hashing_in_LLM_statistical_learning
-│   │   comparator.py
-│   │   Table_results.txt
+│   │   comparator.py - python file used to compare generated itemsets (LLM vs Appriori)
+│   │   Table_results.txt - table of experiment results (found itemsets and hallucinations)
 │   │
 │   ├───ChatGPT-4o
-│   │       C1.txt
-│   │       C2.txt
-│   │       C3.txt
-│   │       C4.txt
-│   │       C5.txt
-│   │       H1.txt
-│   │       H2.txt
-│   │       H3.txt
-│   │       H4.txt
-│   │       H5.txt
-│   │       W1.txt
-│   │       W2.txt
-│   │       W3.txt
-│   │       W4.txt
-│   │       W5.txt
+│   │       C1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 1. iteration
+│   │       C2.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 2. iteration
+│   │       C3.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 3. iteration
+│   │       C4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 4. iteration
+│   │       C5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 5. iteration
+│   │       H1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 1. iteration
+│   │       H2.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 2. iteration
+│   │       H3.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 3. iteration
+│   │       H4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 4. iteration
+│   │       H5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 5. iteration
+│   │       W1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 1. iteration
+│   │       W2.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 2. iteration
+│   │       W3.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 3. iteration
+│   │       W4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 4. iteration
+│   │       W5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 5. iteration
 │   │
 │   ├───CSV_files
-│   │       CSV-Correct.csv
-│   │       CSV-Hashed.csv
-│   │       CSV-Wrong.csv
+│   │       CSV-Correct.csv - the CORRECT dataset
+│   │       CSV-Hashed.csv - the HASHED dataset
+│   │       CSV-Wrong.csv - the WRONG dataset
 │   │
 │   ├───Gold_files
-│   │       gold_CSV_correct.txt
-│   │       gold_CSV_hashed.txt
-│   │       gold_CSV_wrong.txt
+│   │       gold_CSV_correct.txt - Appriori (reference solution) itemsets of various lenghts on the CORRECT dataset
+│   │       gold_CSV_hashed.txt - Appriori (reference solution) itemsets of various lenghts on the HASHED dataset
+│   │       gold_CSV_wrong.txt - Appriori (reference solution) itemsets of various lenghts on the WRONG dataset
 │   │
 │   └───LLAMA-3-1-405b-instruct
-│           c1.txt
-│           c2.txt
-│           c3.txt
-│           c4.txt
-│           c5.txt
-│           h1.txt
-│           h2.txt
-│           h3.txt
-│           h4.txt
-│           h5.txt
-│           w1.txt
-│           w2.txt
-│           w3.txt
-│           w4.txt
-│           w5.txt
+│           c1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 1. iteration
+│           c2.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 2. iteration
+│           c3.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 3. iteration
+│           c4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 4. iteration
+│           c5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 5. iteration
+│           h1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 1. iteration
+│           h2.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 2. iteration
+│           h3.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 3. iteration
+│           h4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 4. iteration
+│           h5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 5. iteration
+│           w1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 1. iteration
+│           w2.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 2. iteration
+│           w3.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 3. iteration
+│           w4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 4. iteration
+│           w5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 5. iteration
 │
 └───Experiment_3_Effect_of_hashing_LLM_reasoning_with_structured_inputs
         ChatGPT-4o-hashed.pdf - GPT 4o's answers to the hashed CSV prompt
