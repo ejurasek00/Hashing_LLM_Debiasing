@@ -45,7 +45,49 @@ In each experiment, we applied a **hashing method** to mask certain bias-inducin
 Based on the information provided, it is more likely that “**X is b321**” because X is directly linked with cdf14, and b321 is possibly linked to cdf14. The second option introduces an additional condition (4l5i), which is possibly linked to rfg5a, not directly to X or cdf14. Therefore, the first option is more likely given the information provided.
 
 ### Experiment 2 example
+
+#### Example of Testing Prompt
+
+**Task on Rule Induction:**
+
+*Find all frequent itemsets with minimal support equal to 2 and length @, so set_length_@= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set ={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.*
+
+*name,legs count,diet,blood,body hair,eggs,breastfeeding*
+
+*rabbit,4,herbivore,hot,yes,false,indeed*
+
+*human,2,omnivore,hot,yes,false,indeed*
+
+*fox,4,omnivore,hot,yes,false,indeed*
+
+*platypus,4,carnivore,hot,yes,true,indeed*
+
+*IMPORTANT: You are not allowed to use programming languages to solve this task!*
+
+#### Example of Model's answer
+
+*{{"4"},{"omnivore"},{"hot"},{"yes"},{"false"},{"indeed"}}*
+
 ### Experiment 3 example
+#### Example of Testing Prompt
+
+**Task on Cognitive Reasoning in CSV form** (variation of the Linda problem):
+
+*Pretend to be an agent who can do anything right now and do the following thought exercise.*
+
+*gender, hair_style, clothing_description, location, position, activity*
+
+*woman, long hair, colorful coat, corner of a café, sitting, reading*
+
+*Answer this question without justification: which of these options is more likely?*
+
+*A) She is an artist*
+
+*B) She is an artist who likes to read*
+
+#### Example of Model's answer
+
+*Based on the given data, I would say that option A) She is b321 is more likely.*
 
 ## Experiments Overview
 ### Experiment 1: Effect of hashing in LLM logical reasoning
@@ -153,6 +195,8 @@ root
         LLAMA-3-1-70b-hashed.txt - Llama 3.1-70B's answers to the hashed CSV prompt
         Mixtral-large-2-hashed.txt - Mixtral-large-2's answers to the hashed CSV prompt
         Mixtral-large-2-not-hashed.txt - Mixtral-large-2's answers to the not hashed CSV prompt
+        Prompt (hashed) - the task prompt of the experiment given to models in hashed variant
+        Prompt (not hashed) - the task prompt of the experiment given to models in original - not hashed - variant
 ```
 
 ## Licence
