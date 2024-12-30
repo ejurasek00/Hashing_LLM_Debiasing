@@ -1,0 +1,34 @@
+LENGTH 1
+[{"2"},{"4"},{"herbivore"},{"omnivore"},{"carnivore"},{"hot"},{"false"}]
+[{"4"},{"omnivore"},{"hot"},{"yes"},{"false"},{"indeed"}]
+[{"4"},{"omnivore"},{"hot"},{"yes"},{"false"},{"indeed"}]
+[{"4"}, {"omnivore"}, {"hot"}, {"yes"}, {"false"}, {"indeed"}]
+[{"4"}, {"omnivore"}, {"hot"}, {"yes"}, {"false"}, {"indeed"}]
+
+LENGTH 2
+[{"4", "hot"}, {"4", "yes"}, {"4", "indeed"}, {"omnivore", "hot"}, {"omnivore", "yes"}, {"omnivore", "indeed"}, {"hot", "yes"}, {"hot", "indeed"}, {"yes", "indeed"}, {"false", "indeed"}, {"hot", "false"}, {"yes", "false"}]
+[{"4","hot"},{"4","yes"},{"4","false"},{"4","indeed"},{"omnivore","hot"},{"omnivore","yes"},{"omnivore","false"},{"omnivore","indeed"},{"hot","yes"},{"hot","false"},{"hot","indeed"},{"yes","false"},{"yes","indeed"},{"false","indeed"}]
+[{"4", "hot"},{"4", "yes"},{"4", "indeed"},{"4", "false"},{"omnivore", "hot"},{"omnivore", "yes"},{"omnivore", "false"},{"omnivore", "indeed"},{"hot", "yes"},{"hot", "false"},{"hot", "indeed"},{"yes", "false"},{"yes", "indeed"},{"false", "indeed"}]
+[{"4", "omnivore"}, {"4", "hot"}, {"4", "yes"}, {"4", "false"}, {"4", "indeed"}, {"omnivore", "hot"}, {"omnivore", "yes"}, {"omnivore", "false"}, {"omnivore", "indeed"}, {"hot", "yes"}, {"hot", "false"}, {"hot", "indeed"}, {"yes", "false"}, {"yes", "indeed"}, {"false", "indeed"}]
+[{"4", "hot"}, {"4", "yes"}, {"4", "false"}, {"4", "indeed"}, {"omnivore", "hot"}, {"omnivore", "yes"}, {"omnivore", "false"}, {"omnivore", "indeed"}, {"hot", "yes"}, {"hot", "false"}, {"hot", "indeed"}, {"yes", "false"}, {"yes", "indeed"}, {"false", "indeed"}]
+
+LENGTH 3
+[{"4", "hot", "yes"}, {"4", "hot", "indeed"}, {"4", "yes", "indeed"}, {"omnivore", "hot", "yes"}, {"omnivore", "hot", "indeed"}, {"omnivore", "yes", "indeed"}, {"hot", "yes", "indeed"}, {"hot", "yes", "false"}, {"hot", "false", "indeed"}, {"yes", "false", "indeed"}]
+[{"4","hot","yes"},{"4","hot","indeed"},{"4","yes","indeed"},{"omnivore","hot","yes"},{"omnivore","hot","false"},{"omnivore","hot","indeed"},{"omnivore","yes","false"},{"omnivore","yes","indeed"},{"omnivore","false","indeed"},{"hot","yes","false"},{"hot","yes","indeed"},{"hot","false","indeed"},{"yes","false","indeed"}]
+[{"4", "hot", "yes"},{"4", "hot", "false"},{"4", "hot", "indeed"},{"4", "yes", "false"},{"4", "yes", "indeed"},{"4", "false", "indeed"},{"omnivore", "hot", "yes"},{"omnivore", "hot", "false"},{"omnivore", "hot", "indeed"},{"omnivore", "yes", "false"},{"omnivore", "yes", "indeed"},{"omnivore", "false", "indeed"},{"hot", "yes", "false"},{"hot", "yes", "indeed"},{"hot", "false", "indeed"},{"yes", "false", "indeed"}]
+[{"4", "omnivore", "hot"}, {"4", "omnivore", "yes"}, {"4", "omnivore", "false"}, {"4", "omnivore", "indeed"}, {"4", "hot", "yes"}, {"4", "hot", "false"}, {"4", "hot", "indeed"}, {"4", "yes", "false"}, {"4", "yes", "indeed"}, {"4", "false", "indeed"}, {"omnivore", "hot", "yes"}, {"omnivore", "hot", "false"}, {"omnivore", "hot", "indeed"}, {"omnivore", "yes", "false"}, {"omnivore", "yes", "indeed"}, {"omnivore", "false", "indeed"}, {"hot", "yes", "false"}, {"hot", "yes", "indeed"}, {"hot", "false", "indeed"}, {"yes", "false", "indeed"}]
+[{"4", "hot", "yes"}, {"4", "hot", "false"}, {"4", "hot", "indeed"}, {"4", "yes", "false"}, {"4", "yes", "indeed"}, {"4", "false", "indeed"}, {"omnivore", "hot", "yes"}, {"omnivore", "hot", "false"}, {"omnivore", "hot", "indeed"}, {"omnivore", "yes", "false"}, {"omnivore", "yes", "indeed"}, {"omnivore", "false", "indeed"}, {"hot", "yes", "false"}, {"hot", "yes", "indeed"}, {"hot", "false", "indeed"}, {"yes", "false", "indeed"}]
+
+LENGTH 4
+[{"4", "hot", "yes", "indeed"}, {"hot", "yes", "false", "indeed"}]
+[{"4","hot","yes","false"},{"4","hot","yes","indeed"},{"4","yes","false","indeed"},{"omnivore","hot","yes","false"},{"omnivore","hot","yes","indeed"},{"omnivore","hot","false","indeed"},{"omnivore","yes","false","indeed"},{"hot","yes","false","indeed"}]
+[{"4", "hot", "yes", "false"},{"4", "hot", "yes", "indeed"},{"4", "hot", "false", "indeed"},{"4", "yes", "false", "indeed"},{"omnivore", "hot", "yes", "false"},{"omnivore", "hot", "yes", "indeed"},{"omnivore", "hot", "false", "indeed"},{"omnivore", "yes", "false", "indeed"},{"hot", "yes", "false", "indeed"}]
+[{"4", "omnivore", "hot", "yes"}, {"4", "omnivore", "hot", "false"}, {"4", "omnivore", "hot", "indeed"}, {"4", "omnivore", "yes", "false"}, {"4", "omnivore", "yes", "indeed"}, {"4", "hot", "yes", "false"}, {"4", "hot", "yes", "indeed"}, {"4", "hot", "false", "indeed"}, {"4", "yes", "false", "indeed"}, {"omnivore", "hot", "yes", "false"}, {"omnivore", "hot", "yes", "indeed"}, {"omnivore", "hot", "false", "indeed"}, {"omnivore", "yes", "false", "indeed"}, {"hot", "yes", "false", "indeed"}]
+[{"4", "hot", "yes", "false"}, {"4", "hot", "yes", "indeed"}, {"4", "hot", "false", "indeed"}, {"4", "yes", "false", "indeed"}, {"omnivore", "hot", "yes", "false"}, {"omnivore", "hot", "yes", "indeed"}, {"omnivore", "hot", "false", "indeed"}, {"omnivore", "yes", "false", "indeed"}, {"hot", "yes", "false", "indeed"}]
+
+LENGTH 5
+[{"4", "hot", "yes", "false", "indeed"}]
+[{"4","hot","yes","false","indeed"},{"omnivore","hot","yes","false","indeed"}]
+[{"4", "hot", "yes", "false", "indeed"},{"omnivore", "hot", "yes", "false", "indeed"}]
+[{"4", "omnivore", "hot", "yes", "false"}, {"4", "omnivore", "hot", "yes", "indeed"}, {"4", "omnivore", "hot", "false", "indeed"}, {"4", "omnivore", "yes", "false", "indeed"}, {"4", "hot", "yes", "false", "indeed"}, {"omnivore", "hot", "yes", "false", "indeed"}]
+[{"4", "hot", "yes", "false", "indeed"}, {"omnivore", "hot", "yes", "false", "indeed"}]
