@@ -202,18 +202,24 @@ root
 │           w4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 4. iteration
 │           w5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 5. iteration
 │
-└───Experiment_3_Effect_of_hashing_LLM_reasoning_with_structured_inputs
-        ChatGPT-4o-hashed.pdf - GPT 4o's answers to the hashed CSV prompt
-        ChatGPT-4o-not-hashed.txt - GPT 4o's answers to the not hashed CSV prompt
-        Gemini-hashed.pdf - Gemini's answers to the hashed CSV prompt
-        Gemini-not-hashed.pdf - Gemini's answers to the not hashed CSV prompt
-        LLAMA-3-1-405b-hashed.txt - Llama 3.1-405B's answers to the hashed CSV prompt
-        LLAMA-3-1-405b-not-hashed.txt - LLAMA-3-1-405b's answers to the not hashed CSV prompt
-        LLAMA-3-1-70b-hashed.txt - Llama 3.1-70B's answers to the hashed CSV prompt
-        Mixtral-large-2-hashed.txt - Mixtral-large-2's answers to the hashed CSV prompt
-        Mixtral-large-2-not-hashed.txt - Mixtral-large-2's answers to the not hashed CSV prompt
-        Prompt (hashed) - the task prompt of the experiment given to models in hashed variant
-        Prompt (not hashed) - the task prompt of the experiment given to models in original - not hashed - variant
+├───Experiment_3_Effect_of_hashing_LLM_reasoning_with_structured_inputs
+│        ChatGPT-4o-hashed.pdf - GPT 4o's answers to the hashed CSV prompt
+│        ChatGPT-4o-not-hashed.txt - GPT 4o's answers to the not hashed CSV prompt
+│        Gemini-hashed.pdf - Gemini's answers to the hashed CSV prompt
+│        Gemini-not-hashed.pdf - Gemini's answers to the not hashed CSV prompt
+│        LLAMA-3-1-405b-hashed.txt - Llama 3.1-405B's answers to the hashed CSV prompt
+│        LLAMA-3-1-405b-not-hashed.txt - LLAMA-3-1-405b's answers to the not hashed CSV prompt
+│        LLAMA-3-1-70b-hashed.txt - Llama 3.1-70B's answers to the hashed CSV prompt
+│        Mixtral-large-2-hashed.txt - Mixtral-large-2's answers to the hashed CSV prompt
+│        Mixtral-large-2-not-hashed.txt - Mixtral-large-2's answers to the not hashed CSV prompt
+│        Prompt (hashed) - the task prompt of the experiment given to models in hashed variant
+│        Prompt (not hashed) - the task prompt of the experiment given to models in original - not hashed - variant
+└───Experiment_4_CoT
+    └───Experiment_4_2_Frequent_itemset_mining
+            Gemini_api_dataset_Correct.ipynb - Python code for finding the frequent itemsets in the CSV-Correct dataset
+            Gemini_api_dataset_Wrong.ipynb - Python code for finding the frequent itemsets in the CSV-Wrong dataset
+            Gemini_CoT_Results_dataset_Correct.txt - Gemini's answers to the prompts including the CSV-Correct dataset
+            Gemini_CoT_Results_dataset_Wrong.txt - Gemini's answers to the prompts including the CSV-Wrong dataset
 ```
 
 ## Licence
