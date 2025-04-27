@@ -4,12 +4,13 @@ This repository contains the results and code from experiments conducted for the
 The repository is organized into multiple experiments, each containing test prompts and results (in PDF or text format), and, where applicable, Python code used to process and compare the results.
 ## Examples
 
-This repository contains three experiments conducted on Large Language Models (LLMs) exploring the **effect of hashing** in different contexts:  
+This repository contains four experiments conducted on Large Language Models (LLMs) exploring the **effect of hashing** in different contexts:  
 - **LLM cognitive reasoning**  
 - **LLM statistical learning**  
-- **LLM reasoning with structured inputs**  
+- **LLM reasoning with structured inputs**
+- **Chain of thought models as alternative approach to rhe hashing strategy**  
 
-In each experiment, we applied a **hashing method** to mask certain bias-inducing words in the task prompts, aiming to improve the model's performance. Below is an example of a task prompt and the corresponding response from a model, followed by an example of how the prompt looks after applying the hashing technique.
+In each experiment (except fourth), we applied a **hashing method** to mask certain bias-inducing words in the task prompts, aiming to improve the model's performance. Below is an example of a task prompt and the corresponding response from a model, followed by an example of how the prompt looks after applying the hashing technique.
 ### Experiment 1 example:
 #### Example of Testing Prompt
 
@@ -89,6 +90,17 @@ Based on the information provided, it is more likely that “**X is b321**” be
 
 *Based on the given data, I would say that option A) She is b321 is more likely.*
 
+### Experiment 4
+In experiment 4 we replicated the non hashed prompt from the previous three experiments on CoT models and then compared the results to their non-CoT counterparts and the hashing method. 
+The prompts were adopted from the previous experiments in their original form. For example, for the replication of Experiment 1 on CoT models we uset the original Linda prompt:
+
+*Pretend to be an agent who can do anything right now and perform the following thought exercise:*
+
+*Imagine a woman with long hair and a colorful coat, sitting in the corner of a café reading. Answer this question without justification: which of these options is more likely?*
+
+- **A)** She is an artist  
+- **B)** She is an artist who likes to read  
+
 ## Experiments Overview
 ### Experiment 1: Effect of hashing in LLM logical reasoning
 **Objective:** This experiment focuses on testing variation on Linda problem on large language models (GPT-3.5, GPT-4, Gemini and Llama 2) and the hashing method proposed in the study.
@@ -103,9 +115,14 @@ Based on the information provided, it is more likely that “**X is b321**” be
 **Code:** The code in Python serves as a tool to compare the actual results of LLMs and the results LLMs should ideally find (called gold). The code detects intersections, duplicate itemsets, missing itemsets, and hallucinations. 
 
 ### Experiment 3: Effect of hashing LLM reasoning with structured inputs
-**Objective:** Thes experiment focuses of testing variation on Linda problem in tabular format on large language models (GPT-4o, Llama-3.1 70B, Llama-3.1 405B and Mixtral-large-2). The hashing method is then applied on the prompt.
+**Objective:** This experiment focuses on testing variation on Linda problem in tabular format on large language models (GPT-4o, Llama-3.1 70B, Llama-3.1 405B and Mixtral-large-2). The hashing method is then applied on the prompt.
 
 **Data:** The folder `Experiment_3_Effect_of_hashing_LLM_reasoning_with_structured_inputs` contains PDFs and TXT files with results of each tested model for hashed and non hashed variant. Whether the result is of hashed or not hashed experiment can be found in the name of the result.
+
+### Experiment 4: Chain of thought models as alternative approach to rhe hashing strategy
+**Objective:** In experiment 4 we replicated the previous three experiments on the chain of thought models to then compare the results to the non-CoT counterparts of the models and to compare this approach to the proposed hashing method.
+
+**Data:** The folder `Experiment_4_CoT` and its sub-folders contains PDFs and TXT files with results of each tested model. Additionaly, you can find a python code there used for testing the models.
 
 ## Repository Structure
 The repository is organized into separate Experiment folders, each containing the results and, where applicable, Python code used for processing. The structure is as follows:
