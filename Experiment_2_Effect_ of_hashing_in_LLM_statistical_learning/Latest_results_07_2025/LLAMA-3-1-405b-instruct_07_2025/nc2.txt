@@ -1,0 +1,208 @@
+Find all frequent itemsets with minimal support equal to 2 and length 1, so set_length1= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 1, we need to identify the items that appear at least twice in each column.
+
+Here are the results:
+
+    name: Not applicable (unique names)
+    legs count: {{"4"}}
+    diet: {{"omnivore"}}
+    blood: {{"hot"}}
+    body hair: {{"yes"}}
+    eggs: {{"false"}}
+    breastfeeding: {{"indeed"}}
+
+So, the set_length1 is:
+
+set_length1 = {{"4"},{"omnivore"},{"hot"},{"yes"},{"false"},{"indeed"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 2, so set_length2= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 2, we need to identify the combinations of two items that appear at least twice.
+
+Here are the results:
+
+    (legs count, diet): {{"4", "omnivore"}}
+    (diet, blood): {{"omnivore", "hot"}}
+    (blood, body hair): {{"hot", "yes"}}
+    (body hair, eggs): {{"yes", "false"}}
+    (eggs, breastfeeding): {{"false", "indeed"}}
+    (legs count, blood): {{"4", "hot"}}
+    (legs count, body hair): {{"4", "yes"}}
+    (legs count, eggs): {{"4", "false"}}
+    (legs count, breastfeeding): {{"4", "indeed"}}
+    (diet, body hair): {{"omnivore", "yes"}}
+    (diet, eggs): {{"omnivore", "false"}}
+    (diet, breastfeeding): {{"omnivore", "indeed"}}
+    (blood, eggs): {{"hot", "false"}}
+    (blood, breastfeeding): {{"hot", "indeed"}}
+    (body hair, breastfeeding): {{"yes", "indeed"}}
+
+So, the set_length2 is:
+
+set_length2 = {{"4", "omnivore"},{"omnivore", "hot"},{"hot", "yes"},{"yes", "false"},{"false", "indeed"},{"4", "hot"},{"4", "yes"},{"4", "false"},{"4", "indeed"},{"omnivore", "yes"},{"omnivore", "false"},{"omnivore", "indeed"},{"hot", "false"},{"hot", "indeed"},{"yes", "indeed"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 3, so set_length3= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 3, we need to identify the combinations of three items that appear at least twice.
+
+Here are the results:
+
+    (legs count, diet, blood): {{"4", "omnivore", "hot"}}
+    (diet, blood, body hair): {{"omnivore", "hot", "yes"}}
+    (blood, body hair, eggs): {{"hot", "yes", "false"}}
+    (body hair, eggs, breastfeeding): {{"yes", "false", "indeed"}}
+    (legs count, blood, body hair): {{"4", "hot", "yes"}}
+    (legs count, body hair, eggs): {{"4", "yes", "false"}}
+    (legs count, eggs, breastfeeding): {{"4", "false", "indeed"}}
+    (diet, body hair, breastfeeding): {{"omnivore", "yes", "indeed"}}
+    (blood, eggs, breastfeeding): {{"hot", "false", "indeed"}}
+    (legs count, blood, breastfeeding): {{"4", "hot", "indeed"}}
+    (legs count, diet, body hair): {{"4", "omnivore", "yes"}}
+    (legs count, diet, eggs): {{"4", "omnivore", "false"}}
+    (legs count, diet, breastfeeding): {{"4", "omnivore", "indeed"}}
+    (diet, blood, eggs): {{"omnivore", "hot", "false"}}
+    (diet, blood, breastfeeding): {{"omnivore", "hot", "indeed"}}
+    (blood, body hair, breastfeeding): {{"hot", "yes", "indeed"}}
+
+However, not all of these combinations meet the minimal support requirement of 2. After re-examining the data, we can see that the following combinations meet the requirement:
+
+    (legs count, blood, body hair): {{"4", "hot", "yes"}}
+    (blood, body hair, breastfeeding): {{"hot", "yes", "indeed"}}
+    (legs count, blood, breastfeeding): {{"4", "hot", "indeed"}}
+    (blood, body hair, eggs): {{"hot", "yes", "false"}}
+    (body hair, eggs, breastfeeding): {{"yes", "false", "indeed"}}
+    (legs count, body hair, eggs): {{"4", "yes", "false"}}
+    (legs count, eggs, breastfeeding): {{"4", "false", "indeed"}}
+    (blood, eggs, breastfeeding): {{"hot", "false", "indeed"}}
+
+So, the set_length3 is:
+
+set_length3 = {{"4", "hot", "yes"},{"hot", "yes", "indeed"},{"4", "hot", "indeed"},{"hot", "yes", "false"},{"yes", "false", "indeed"},{"4", "yes", "false"},{"4", "false", "indeed"},{"hot", "false", "indeed"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 4, so set_length4= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 4, we need to identify the combinations of four items that appear at least twice.
+
+Here are the results:
+
+    (legs count, blood, body hair, eggs): {{"4", "hot", "yes", "false"}}
+    (legs count, blood, body hair, breastfeeding): {{"4", "hot", "yes", "indeed"}}
+    (legs count, blood, eggs, breastfeeding): {{"4", "hot", "false", "indeed"}}
+    (blood, body hair, eggs, breastfeeding): {{"hot", "yes", "false", "indeed"}}
+    (legs count, diet, blood, body hair): Not enough support
+    (legs count, diet, blood, eggs): Not enough support
+    (legs count, diet, blood, breastfeeding): Not enough support
+    (legs count, diet, body hair, eggs): Not enough support
+    (legs count, diet, body hair, breastfeeding): Not enough support
+    (legs count, diet, eggs, breastfeeding): Not enough support
+
+However, not all of these combinations meet the minimal support requirement of 2. After re-examining the data, we can see that the following combinations meet the requirement:
+
+    (legs count, blood, body hair, eggs): {{"4", "hot", "yes", "false"}}
+    (legs count, blood, body hair, breastfeeding): {{"4", "hot", "yes", "indeed"}}
+    (legs count, blood, eggs, breastfeeding): {{"4", "hot", "false", "indeed"}}
+    (blood, body hair, eggs, breastfeeding): {{"hot", "yes", "false", "indeed"}}
+
+So, the set_length4 is:
+
+set_length4 = {{"4", "hot", "yes", "false"},{"4", "hot", "yes", "indeed"},{"4", "hot", "false", "indeed"},{"hot", "yes", "false", "indeed"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 5, so set_length5= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 5, we need to identify the combinations of five items that appear at least twice.
+
+Here are the results:
+
+    (legs count, blood, body hair, eggs, breastfeeding): {{"4", "hot", "yes", "false", "indeed"}}
+    (diet, blood, body hair, eggs, breastfeeding): Not enough support
+    (legs count, diet, blood, body hair, eggs): Not enough support
+    (legs count, diet, blood, body hair, breastfeeding): Not enough support
+    (legs count, diet, blood, eggs, breastfeeding): Not enough support
+    (legs count, diet, body hair, eggs, breastfeeding): Not enough support
+
+However, not all of these combinations meet the minimal support requirement of 2. After re-examining the data, we can see that the following combination meets the requirement:
+
+    (legs count, blood, body hair, eggs, breastfeeding): {{"4", "hot", "yes", "false", "indeed"}}
+
+So, the set_length5 is:
+
+set_length5 = {{"4", "hot", "yes", "false", "indeed"}}

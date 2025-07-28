@@ -1,0 +1,229 @@
+Find all frequent itemsets with minimal support equal to 2 and length 1, so set_length_1= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,6,carnivore,cold,no,true,negative
+
+human,4,herbivore,cold,no,true,negative
+
+fox,6,herbivore,cold,no,true,negative
+
+platypus,6,omnivore,cold,no,false,negative
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 1, we need to identify the individual items (or attributes) that appear at least twice in the dataset. Since the length is 1, we're looking at each attribute individually.
+
+Given the dataset:
+
+    rabbit,6,carnivore,cold,no,true,negative
+    human,4,herbivore,cold,no,true,negative
+    fox,6,herbivore,cold,no,true,negative
+    platypus,6,omnivore,cold,no,false,negative
+
+Let's analyze each column (attribute):
+
+    name: Each name is unique, so there are no frequent itemsets here.
+    legs count: The values "6" appears three times, which meets our criteria. The value "4" appears once, which does not meet the criteria.
+    diet: "herbivore" appears twice, which meets our criteria. "carnivore" and "omnivore" each appear once, which does not meet the criteria.
+    blood: "cold" appears four times, which meets our criteria.
+    body hair: "no" appears four times, which meets our criteria.
+    eggs: "true" appears three times, which meets our criteria. "false" appears once, which does not meet the criteria.
+    breastfeeding: "negative" appears four times, which meets our criteria.
+
+Therefore, the set of frequent itemsets with minimal support equal to 2 and length 1 is:
+
+set={{"6"},{"herbivore"},{"cold"},{"no"},{"true"},{"negative"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 2, so set_length_2= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,6,carnivore,cold,no,true,negative
+
+human,4,herbivore,cold,no,true,negative
+
+fox,6,herbivore,cold,no,true,negative
+
+platypus,6,omnivore,cold,no,false,negative
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 2, we need to identify the combinations of two items (or attributes) that appear at least twice in the dataset.
+
+Given the dataset:
+
+    rabbit,6,carnivore,cold,no,true,negative
+    human,4,herbivore,cold,no,true,negative
+    fox,6,herbivore,cold,no,true,negative
+    platypus,6,omnivore,cold,no,false,negative
+
+Let's analyze the combinations of two attributes:
+
+    legs count and diet: (6,herbivore) appears twice.
+    legs count and blood: (6,cold) appears three times.
+    legs count and body hair: (6,no) appears three times.
+    legs count and eggs: (6,true) appears twice.
+    legs count and breastfeeding: (6,negative) appears three times.
+    diet and blood: (herbivore,cold) appears twice.
+    diet and body hair: (herbivore,no) appears twice.
+    diet and eggs: (herbivore,true) appears twice.
+    diet and breastfeeding: (herbivore,negative) appears twice.
+    blood and body hair: (cold,no) appears four times.
+    blood and eggs: (cold,true) appears three times.
+    blood and breastfeeding: (cold,negative) appears four times.
+    body hair and eggs: (no,true) appears three times.
+    body hair and breastfeeding: (no,negative) appears four times.
+    eggs and breastfeeding: (true,negative) appears three times.
+
+Therefore, the set of frequent itemsets with minimal support equal to 2 and length 2 is:
+
+set={{"6,herbivore"},{"6,cold"},{"6,no"},{"6,true"},{"6,negative"},{"herbivore,cold"},{"herbivore,no"},{"herbivore,true"},{"herbivore,negative"},{"cold,no"},{"cold,true"},{"cold,negative"},{"no,true"},{"no,negative"},{"true,negative"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 3, so set_length_3= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,6,carnivore,cold,no,true,negative
+
+human,4,herbivore,cold,no,true,negative
+
+fox,6,herbivore,cold,no,true,negative
+
+platypus,6,omnivore,cold,no,false,negative
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 3, we need to identify the combinations of three items (or attributes) that appear at least twice in the dataset.
+
+Given the dataset:
+
+    rabbit,6,carnivore,cold,no,true,negative
+    human,4,herbivore,cold,no,true,negative
+    fox,6,herbivore,cold,no,true,negative
+    platypus,6,omnivore,cold,no,false,negative
+
+Let's analyze the combinations of three attributes:
+
+    legs count, diet, and blood: (6,herbivore,cold) appears twice.
+    legs count, diet, and body hair: (6,herbivore,no) appears twice.
+    legs count, diet, and eggs: (6,herbivore,true) appears twice.
+    legs count, diet, and breastfeeding: (6,herbivore,negative) appears twice.
+    legs count, blood, and body hair: (6,cold,no) appears three times.
+    legs count, blood, and eggs: (6,cold,true) appears twice.
+    legs count, blood, and breastfeeding: (6,cold,negative) appears three times.
+    legs count, body hair, and eggs: (6,no,true) appears twice.
+    legs count, body hair, and breastfeeding: (6,no,negative) appears three times.
+    legs count, eggs, and breastfeeding: (6,true,negative) appears twice.
+    diet, blood, and body hair: (herbivore,cold,no) appears twice.
+    diet, blood, and eggs: (herbivore,cold,true) appears twice.
+    diet, blood, and breastfeeding: (herbivore,cold,negative) appears twice.
+    diet, body hair, and eggs: (herbivore,no,true) appears twice.
+    diet, body hair, and breastfeeding: (herbivore,no,negative) appears twice.
+    diet, eggs, and breastfeeding: (herbivore,true,negative) appears twice.
+    blood, body hair, and eggs: (cold,no,true) appears three times.
+    blood, body hair, and breastfeeding: (cold,no,negative) appears four times.
+    blood, eggs, and breastfeeding: (cold,true,negative) appears three times.
+    body hair, eggs, and breastfeeding: (no,true,negative) appears three times.
+
+Therefore, the set of frequent itemsets with minimal support equal to 2 and length 3 is:
+
+set={{"6,herbivore,cold"},{"6,herbivore,no"},{"6,herbivore,true"},{"6,herbivore,negative"},{"6,cold,no"},{"6,cold,true"},{"6,cold,negative"},{"6,no,true"},{"6,no,negative"},{"6,true,negative"},{"herbivore,cold,no"},{"herbivore,cold,true"},{"herbivore,cold,negative"},{"herbivore,no,true"},{"herbivore,no,negative"},{"herbivore,true,negative"},{"cold,no,true"},{"cold,no,negative"},{"cold,true,negative"},{"no,true,negative"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 4, so set_length_4= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,6,carnivore,cold,no,true,negative
+
+human,4,herbivore,cold,no,true,negative
+
+fox,6,herbivore,cold,no,true,negative
+
+platypus,6,omnivore,cold,no,false,negative
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 4, we need to identify the combinations of four items (or attributes) that appear at least twice in the dataset.
+
+Given the dataset:
+
+    rabbit,6,carnivore,cold,no,true,negative
+    human,4,herbivore,cold,no,true,negative
+    fox,6,herbivore,cold,no,true,negative
+    platypus,6,omnivore,cold,no,false,negative
+
+Let's analyze the combinations of four attributes:
+
+    legs count, diet, blood, and body hair: (6,herbivore,cold,no) appears twice.
+    legs count, diet, blood, and eggs: (6,herbivore,cold,true) appears twice.
+    legs count, diet, blood, and breastfeeding: (6,herbivore,cold,negative) appears twice.
+    legs count, diet, body hair, and eggs: (6,herbivore,no,true) appears twice.
+    legs count, diet, body hair, and breastfeeding: (6,herbivore,no,negative) appears twice.
+    legs count, blood, body hair, and eggs: (6,cold,no,true) appears twice.
+    legs count, blood, body hair, and breastfeeding: (6,cold,no,negative) appears three times.
+    legs count, blood, eggs, and breastfeeding: (6,cold,true,negative) appears twice.
+    legs count, body hair, eggs, and breastfeeding: (6,no,true,negative) appears twice.
+    diet, blood, body hair, and eggs: (herbivore,cold,no,true) appears twice.
+    diet, blood, body hair, and breastfeeding: (herbivore,cold,no,negative) appears twice.
+    diet, blood, eggs, and breastfeeding: (herbivore,cold,true,negative) appears twice.
+    diet, body hair, eggs, and breastfeeding: (herbivore,no,true,negative) appears twice.
+    blood, body hair, eggs, and breastfeeding: (cold,no,true,negative) appears three times.
+
+Therefore, the set of frequent itemsets with minimal support equal to 2 and length 4 is:
+
+set={{"6,herbivore,cold,no"},{"6,herbivore,cold,true"},{"6,herbivore,cold,negative"},{"6,herbivore,no,true"},{"6,herbivore,no,negative"},{"6,cold,no,true"},{"6,cold,no,negative"},{"6,cold,true,negative"},{"6,no,true,negative"},{"herbivore,cold,no,true"},{"herbivore,cold,no,negative"},{"herbivore,cold,true,negative"},{"herbivore,no,true,negative"},{"cold,no,true,negative"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 5, so set_length_5= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,6,carnivore,cold,no,true,negative
+
+human,4,herbivore,cold,no,true,negative
+
+fox,6,herbivore,cold,no,true,negative
+
+platypus,6,omnivore,cold,no,false,negative
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 5, we need to identify the combinations of five items (or attributes) that appear at least twice in the dataset.
+
+Given the dataset:
+
+    rabbit,6,carnivore,cold,no,true,negative
+    human,4,herbivore,cold,no,true,negative
+    fox,6,herbivore,cold,no,true,negative
+    platypus,6,omnivore,cold,no,false,negative
+
+Let's analyze the combinations of five attributes:
+
+    legs count, diet, blood, body hair, and eggs: (6,herbivore,cold,no,true) appears twice.
+    legs count, diet, blood, body hair, and breastfeeding: (6,herbivore,cold,no,negative) appears twice.
+    legs count, diet, blood, eggs, and breastfeeding: (6,herbivore,cold,true,negative) appears twice.
+    legs count, diet, body hair, eggs, and breastfeeding: (6,herbivore,no,true,negative) appears twice.
+    legs count, blood, body hair, eggs, and breastfeeding: (6,cold,no,true,negative) appears twice.
+    diet, blood, body hair, eggs, and breastfeeding: (herbivore,cold,no,true,negative) appears twice.
+
+Therefore, the set of frequent itemsets with minimal support equal to 2 and length 5 is:
+
+set={{"6,herbivore,cold,no,true"},{"6,herbivore,cold,no,negative"},{"6,herbivore,cold,true,negative"},{"6,herbivore,no,true,negative"},{"6,cold,no,true,negative"},{"herbivore,cold,no,true,negative"}}

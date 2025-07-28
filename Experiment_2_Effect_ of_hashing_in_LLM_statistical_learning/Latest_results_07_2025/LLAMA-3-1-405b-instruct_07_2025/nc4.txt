@@ -1,0 +1,167 @@
+Find all frequent itemsets with minimal support equal to 2 and length 1, so set_length1= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 1, we need to identify the items that appear at least twice in each column.
+
+Here are the results:
+
+    For the "name" column, no item appears more than once since names are unique, so it's not considered.
+    For the "legs count" column, the item "4" appears 3 times, which is more than the minimal support, so it's included.
+    For the "diet" column, the items "omnivore" appears 2 times, which meets the minimal support, so it's included. The item "herbivore" and "carnivore" appear only once, so they are not included.
+    For the "blood" column, the item "hot" appears 4 times, which is more than the minimal support, so it's included.
+    For the "body hair" column, the item "yes" appears 4 times, which is more than the minimal support, so it's included.
+    For the "eggs" column, the item "false" appears 3 times, which is more than the minimal support, so it's included. The item "true" appears only once, so it's not included.
+    For the "breastfeeding" column, the item "indeed" appears 4 times, which is more than the minimal support, so it's included.
+
+The set of frequent itemsets with length 1 is:
+
+set_length1 = {{"4"},{"omnivore"},{"hot"},{"yes"},{"false"},{"indeed"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 2, so set_length2= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 2, we need to identify the combinations of two items that appear at least twice together.
+
+Here are the results:
+
+    The combination of "4" and "hot" appears 3 times, which is more than the minimal support, so it's included.
+    The combination of "4" and "yes" appears 3 times, which is more than the minimal support, so it's included.
+    The combination of "4" and "indeed" appears 3 times, which is more than the minimal support, so it's included.
+    The combination of "omnivore" and "hot" appears 2 times, which meets the minimal support, so it's included.
+    The combination of "omnivore" and "yes" appears 2 times, which meets the minimal support, so it's included.
+    The combination of "omnivore" and "false" appears 2 times, which meets the minimal support, so it's included.
+    The combination of "omnivore" and "indeed" appears 2 times, which meets the minimal support, so it's included.
+    The combination of "hot" and "yes" appears 4 times, which is more than the minimal support, so it's included.
+    The combination of "hot" and "indeed" appears 4 times, which is more than the minimal support, so it's included.
+    The combination of "yes" and "indeed" appears 4 times, which is more than the minimal support, so it's included.
+    The combination of "false" and "indeed" appears 3 times, which is more than the minimal support, so it's included.
+
+The set of frequent itemsets with length 2 is:
+
+set_length2 = {{"4","hot"},{"4","yes"},{"4","indeed"},{"omnivore","hot"},{"omnivore","yes"},{"omnivore","false"},{"omnivore","indeed"},{"hot","yes"},{"hot","indeed"},{"yes","indeed"},{"false","indeed"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 3, so set_length3= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 3, we need to identify the combinations of three items that appear at least twice together.
+
+Here are the results:
+
+    The combination of "4", "hot", and "yes" appears 3 times, which is more than the minimal support, so it's included.
+    The combination of "4", "hot", and "indeed" appears 3 times, which is more than the minimal support, so it's included.
+    The combination of "4", "yes", and "indeed" appears 3 times, which is more than the minimal support, so it's included.
+    The combination of "omnivore", "hot", and "yes" appears 2 times, which meets the minimal support, so it's included.
+    The combination of "omnivore", "hot", and "false" appears 2 times, which meets the minimal support, so it's included.
+    The combination of "omnivore", "hot", and "indeed" appears 2 times, which meets the minimal support, so it's included.
+    The combination of "omnivore", "yes", and "false" appears 2 times, which meets the minimal support, so it's included.
+    The combination of "omnivore", "yes", and "indeed" appears 2 times, which meets the minimal support, so it's included.
+    The combination of "hot", "yes", and "indeed" appears 4 times, which is more than the minimal support, so it's included.
+    The combination of "hot", "false", and "indeed" appears 3 times, which is more than the minimal support, so it's included.
+    The combination of "yes", "false", and "indeed" appears 3 times, which is more than the minimal support, so it's included.
+
+The set of frequent itemsets with length 3 is:
+
+set_length3 = {{"4","hot","yes"},{"4","hot","indeed"},{"4","yes","indeed"},{"omnivore","hot","yes"},{"omnivore","hot","false"},{"omnivore","hot","indeed"},{"omnivore","yes","false"},{"omnivore","yes","indeed"},{"hot","yes","indeed"},{"hot","false","indeed"},{"yes","false","indeed"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 4, so set_length4= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 4, we need to identify the combinations of four items that appear at least twice together.
+
+Here are the results:
+
+    The combination of "4", "hot", "yes", and "indeed" appears 3 times, which is more than the minimal support, so it's included.
+    The combination of "omnivore", "hot", "yes", and "indeed" appears 2 times, which meets the minimal support, so it's included.
+    The combination of "omnivore", "hot", "yes", and "false" appears 2 times, which meets the minimal support, so it's included.
+    The combination of "hot", "yes", "false", and "indeed" appears 3 times, which is more than the minimal support, so it's included.
+
+The set of frequent itemsets with length 4 is:
+
+set_length4 = {{"4","hot","yes","indeed"},{"omnivore","hot","yes","indeed"},{"omnivore","hot","yes","false"},{"hot","yes","false","indeed"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 5, so set_length5= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+name,legs count,diet,blood,body hair,eggs,breastfeeding
+
+rabbit,4,herbivore,hot,yes,false,indeed
+
+human,2,omnivore,hot,yes,false,indeed
+
+fox,4,omnivore,hot,yes,false,indeed
+
+platypus,4,carnivore,hot,yes,true,indeed
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 5, we need to identify the combinations of five items that appear at least twice together.
+
+Here are the results:
+
+    The combination of "omnivore", "hot", "yes", "false", and "indeed" appears 2 times, which meets the minimal support, so it's included.
+    The combination of "4", "hot", "yes", "false", and "indeed" appears 2 times, which meets the minimal support, so it's included, but actually appears 3 times with "4" and "hot" and "yes" and "indeed" with the false not being shared by the platypus, but shared by the other three, but only two have the omnivore so only the second itemset is valid.
+
+The set of frequent itemsets with length 5 is:
+
+set_length5 = {{"omnivore","hot","yes","false","indeed"},{"4","hot","yes","false","indeed"}}

@@ -1,5 +1,0 @@
-name,legs count,diet,blood,body hair,eggs,breastfeeding
-rabbit,4,herbivore,hot,yes,false,indeed
-human,2,omnivore,hot,yes,false,indeed
-fox,4,omnivore,hot,yes,false,indeed
-platypus,4,carnivore,hot,yes,true,indeed

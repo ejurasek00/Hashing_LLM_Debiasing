@@ -1,0 +1,206 @@
+Find all frequent itemsets with minimal support equal to 2 and length 1, so set_length_1= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354C31,DBCEEF,6CE255,199D26,D59553,331981,869F50
+
+B2895C,B0FAAD,9ED0E8,D11884,269963,ADC8A2,999999
+
+1520D1,49E95E,A6463C,D11884,269963,ADC8A2,999999
+
+0BEA8D,B0FAAD,A6463C,D11884,269963,ADC8A2,999999
+
+7EA60D,B0FAAD,C5B9CC,D11884,269963,420666,999999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 1, we need to identify the items that appear at least twice in the dataset.
+
+Let's count the occurrences of each item:
+
+    354C31: 1
+    DBCEEF: 1
+    6CE255: 1
+    199D26: 1
+    D59553: 1
+    331981: 1
+    869F50: 1
+    B2895C: 1
+    B0FAAD: 3
+    9ED0E8: 1
+    D11884: 4
+    269963: 4
+    ADC8A2: 4
+    999999: 4
+    1520D1: 1
+    49E95E: 1
+    A6463C: 2
+    0BEA8D: 1
+    7EA60D: 1
+    C5B9CC: 1
+    420666: 1
+
+The items that appear at least twice are:
+
+    B0FAAD: 3
+    D11884: 4
+    269963: 4
+    ADC8A2: 4
+    999999: 4
+    A6463C: 2
+
+The frequent itemsets with minimal support equal to 2 and length 1 are:
+
+set_length_1 = {{"B0FAAD"},{"D11884"},{"269963"},{"ADC8A2"},{"999999"},{"A6463C"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 2, so set_length_2= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354C31,DBCEEF,6CE255,199D26,D59553,331981,869F50
+
+B2895C,B0FAAD,9ED0E8,D11884,269963,ADC8A2,999999
+
+1520D1,49E95E,A6463C,D11884,269963,ADC8A2,999999
+
+0BEA8D,B0FAAD,A6463C,D11884,269963,ADC8A2,999999
+
+7EA60D,B0FAAD,C5B9CC,D11884,269963,420666,999999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 2, we need to identify the pairs of items that appear together at least twice in the dataset.
+
+Let's analyze the dataset:
+
+    B0FAAD and D11884 appear together in rows 2, 4, and 5
+    B0FAAD and 269963 appear together in rows 2, 4, and 5
+    B0FAAD and ADC8A2 appear together in rows 2, 4, and 5
+    B0FAAD and 999999 appear together in rows 2, 4, and 5
+    D11884 and 269963 appear together in rows 2, 3, 4, and 5
+    D11884 and ADC8A2 appear together in rows 2, 3, 4, and 5
+    D11884 and 999999 appear together in rows 2, 3, 4, and 5
+    269963 and ADC8A2 appear together in rows 2, 3, 4, and 5
+    269963 and 999999 appear together in rows 2, 3, 4, and 5
+    ADC8A2 and 999999 appear together in rows 2, 3, 4, and 5
+    A6463C and D11884 appear together in rows 3 and 4
+    A6463C and 269963 appear together in rows 3 and 4
+    A6463C and ADC8A2 appear together in rows 3 and 4
+    A6463C and 999999 appear together in rows 3 and 4
+
+The frequent itemsets with minimal support equal to 2 and length 2 are:
+
+set_length_2 = {{"B0FAAD", "D11884"}, {"B0FAAD", "269963"}, {"B0FAAD", "ADC8A2"}, {"B0FAAD", "999999"}, {"D11884", "269963"}, {"D11884", "ADC8A2"}, {"D11884", "999999"}, {"269963", "ADC8A2"}, {"269963", "999999"}, {"ADC8A2", "999999"}, {"A6463C", "D11884"}, {"A6463C", "269963"}, {"A6463C", "ADC8A2"}, {"A6463C", "999999"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 3, so set_length_3= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354C31,DBCEEF,6CE255,199D26,D59553,331981,869F50
+
+B2895C,B0FAAD,9ED0E8,D11884,269963,ADC8A2,999999
+
+1520D1,49E95E,A6463C,D11884,269963,ADC8A2,999999
+
+0BEA8D,B0FAAD,A6463C,D11884,269963,ADC8A2,999999
+
+7EA60D,B0FAAD,C5B9CC,D11884,269963,420666,999999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 3, we need to identify the triplets of items that appear together at least twice in the dataset.
+
+Let's analyze the dataset:
+
+    B0FAAD, D11884, and 269963 appear together in rows 2, 4, and 5
+    B0FAAD, D11884, and ADC8A2 appear together in rows 2, 4, and 5
+    B0FAAD, D11884, and 999999 appear together in rows 2, 4, and 5
+    B0FAAD, 269963, and ADC8A2 appear together in rows 2, 4, and 5
+    B0FAAD, 269963, and 999999 appear together in rows 2, 4, and 5
+    B0FAAD, ADC8A2, and 999999 appear together in rows 2, 4, and 5
+    D11884, 269963, and ADC8A2 appear together in rows 2, 3, 4, and 5
+    D11884, 269963, and 999999 appear together in rows 2, 3, 4, and 5
+    D11884, ADC8A2, and 999999 appear together in rows 2, 3, 4, and 5
+    269963, ADC8A2, and 999999 appear together in rows 2, 3, 4, and 5
+    A6463C, D11884, and 269963 appear together in rows 3 and 4
+    A6463C, D11884, and ADC8A2 appear together in rows 3 and 4
+    A6463C, D11884, and 999999 appear together in rows 3 and 4
+    A6463C, 269963, and ADC8A2 appear together in rows 3 and 4
+    A6463C, 269963, and 999999 appear together in rows 3 and 4
+    A6463C, ADC8A2, and 999999 appear together in rows 3 and 4
+
+The frequent itemsets with minimal support equal to 2 and length 3 are:
+
+set_length_3 = {{"B0FAAD", "D11884", "269963"}, {"B0FAAD", "D11884", "ADC8A2"}, {"B0FAAD", "D11884", "999999"}, {"B0FAAD", "269963", "ADC8A2"}, {"B0FAAD", "269963", "999999"}, {"B0FAAD", "ADC8A2", "999999"}, {"D11884", "269963", "ADC8A2"}, {"D11884", "269963", "999999"}, {"D11884", "ADC8A2", "999999"}, {"269963", "ADC8A2", "999999"}, {"A6463C", "D11884", "269963"}, {"A6463C", "D11884", "ADC8A2"}, {"A6463C", "D11884", "999999"}, {"A6463C", "269963", "ADC8A2"}, {"A6463C", "269963", "999999"}, {"A6463C", "ADC8A2", "999999"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 4, so set_length_4= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354C31,DBCEEF,6CE255,199D26,D59553,331981,869F50
+
+B2895C,B0FAAD,9ED0E8,D11884,269963,ADC8A2,999999
+
+1520D1,49E95E,A6463C,D11884,269963,ADC8A2,999999
+
+0BEA8D,B0FAAD,A6463C,D11884,269963,ADC8A2,999999
+
+7EA60D,B0FAAD,C5B9CC,D11884,269963,420666,999999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 4, we need to identify the quadruplets of items that appear together at least twice in the dataset.
+
+Let's analyze the dataset:
+
+    B0FAAD, D11884, 269963, and ADC8A2 appear together in rows 2 and 4
+    B0FAAD, D11884, 269963, and 999999 appear together in rows 2 and 4
+    B0FAAD, D11884, ADC8A2, and 999999 appear together in rows 2 and 4
+    B0FAAD, 269963, ADC8A2, and 999999 appear together in rows 2 and 4
+    D11884, 269963, ADC8A2, and 999999 appear together in rows 2, 3, and 4
+    A6463C, D11884, 269963, and ADC8A2 appear together in rows 3 and 4
+    A6463C, D11884, 269963, and 999999 appear together in rows 3 and 4
+    A6463C, D11884, ADC8A2, and 999999 appear together in rows 3 and 4
+    A6463C, 269963, ADC8A2, and 999999 appear together in rows 3 and 4
+
+The frequent itemsets with minimal support equal to 2 and length 4 are:
+
+-------------------------------------------------------------------------------------------------------------------
+
+set_length_4 = {{"B0FAAD", "D11884", "269963", "ADC8A2"}, {"B0FAAD", "D11884", "269963", "999999"}, {"B0FAAD", "D11884", "ADC8A2", "999999"}, {"B0FAAD", "269963", "ADC8A2", "999999"}, {"D11884", "269963", "ADC8A2", "999999"}, {"A6463C", "D11884", "269963", "ADC8A2"}, {"A6463C", "D11884", "269963", "999999"}, {"A6463C", "D11884", "ADC8A2", "999999"}, {"A6463C", "269963", "ADC8A2", "999999"}}
+
+Find all frequent itemsets with minimal support equal to 2 and length 5, so set_length_5= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354C31,DBCEEF,6CE255,199D26,D59553,331981,869F50
+
+B2895C,B0FAAD,9ED0E8,D11884,269963,ADC8A2,999999
+
+1520D1,49E95E,A6463C,D11884,269963,ADC8A2,999999
+
+0BEA8D,B0FAAD,A6463C,D11884,269963,ADC8A2,999999
+
+7EA60D,B0FAAD,C5B9CC,D11884,269963,420666,999999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 5, we need to identify the quintuplets of items that appear together at least twice in the dataset.
+
+Let's analyze the dataset:
+
+    B0FAAD, A6463C, D11884, 269963, and ADC8A2 appear together in rows 3 and 4
+    B0FAAD, A6463C, D11884, 269963, and 999999 appear together in rows 3 and 4
+    B0FAAD, A6463C, D11884, ADC8A2, and 999999 appear together in rows 3 and 4
+    B0FAAD, A6463C, 269963, ADC8A2, and 999999 appear together in rows 3 and 4
+    A6463C, D11884, 269963, ADC8A2, and 999999 appear together in rows 3 and 4
+
+The frequent itemsets with minimal support equal to 2 and length 5 are:
+
+set_length_5 = {{"B0FAAD", "A6463C", "D11884", "269963", "ADC8A2"}, {"B0FAAD", "A6463C", "D11884", "269963", "999999"}, {"B0FAAD", "A6463C", "D11884", "ADC8A2", "999999"}, {"B0FAAD", "A6463C", "269963", "ADC8A2", "999999"}, {"A6463C", "D11884", "269963", "ADC8A2", "999999"}}

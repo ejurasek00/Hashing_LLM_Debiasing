@@ -1,5 +1,0 @@
-name,legs count,diet,blood,body hair,eggs,breastfeeding 
-rabbit,6,carnivore,cold,no,true,negative
-human,4,herbivore,cold,no,true,negative
-fox,6,herbivore,cold,no,true,negative
-platypus,6,omnivore,cold,no,false,negative

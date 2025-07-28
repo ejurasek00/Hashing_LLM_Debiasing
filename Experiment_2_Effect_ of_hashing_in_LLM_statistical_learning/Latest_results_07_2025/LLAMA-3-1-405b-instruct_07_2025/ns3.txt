@@ -1,0 +1,212 @@
+Find all frequent itemsets with minimal support equal to 2 and length 1, so set_length_1= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354,312,624,199,359,331,869
+
+128,105,943,311,269,032,999
+
+152,494,064,311,269,032,999
+
+014,105,064,311,269,032,999
+
+740,105,251,311,269,420,999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 1, we need to identify the items that appear at least twice in the dataset.
+
+Let's analyze the dataset:
+
+    354 appears only once
+    312 appears only once
+    624 appears only once
+    199 appears only once
+    359 appears only once
+    331 appears only once
+    869 appears only once
+    128 appears only once
+    105 appears 3 times
+    943 appears only once
+    311 appears 4 times
+    269 appears 4 times
+    032 appears 3 times
+    999 appears 4 times
+    152 appears only once
+    494 appears only once
+    064 appears 2 times
+    014 appears only once
+    740 appears only once
+    251 appears only once
+    420 appears only once
+
+The items that appear at least twice are:
+
+    105 (3 times)
+    311 (4 times)
+    269 (4 times)
+    032 (3 times)
+    999 (4 times)
+    064 (2 times)
+
+Therefore, the frequent itemsets with minimal support equal to 2 and length 1 are:
+
+set_length_1 = {{"105"},{"311"},{"269"},{"032"},{"999"},{"064"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 2, so set_length_2= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354,312,624,199,359,331,869
+
+128,105,943,311,269,032,999
+
+152,494,064,311,269,032,999
+
+014,105,064,311,269,032,999
+
+740,105,251,311,269,420,999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 2, we need to identify the pairs of items that appear together at least twice in the dataset.
+
+Let's analyze the dataset:
+
+    (105, 311) appears 3 times
+    (105, 269) appears 3 times
+    (105, 032) appears 3 times
+    (105, 999) appears 3 times
+    (311, 269) appears 4 times
+    (311, 032) appears 3 times
+    (311, 999) appears 4 times
+    (269, 032) appears 3 times
+    (269, 999) appears 4 times
+    (032, 999) appears 3 times
+    (064, 311) appears 2 times
+    (064, 269) appears 2 times
+    (064, 032) appears 2 times
+    (064, 999) appears 2 times
+
+The pairs of items that appear together at least twice are:
+
+set_length_2 = {{"105, 311"},{"105, 269"},{"105, 032"},{"105, 999"},{"311, 269"},{"311, 032"},{"311, 999"},{"269, 032"},{"269, 999"},{"032, 999"},{"064, 311"},{"064, 269"},{"064, 032"},{"064, 999"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 3, so set_length_3= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354,312,624,199,359,331,869
+
+128,105,943,311,269,032,999
+
+152,494,064,311,269,032,999
+
+014,105,064,311,269,032,999
+
+740,105,251,311,269,420,999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 3, we need to identify the triplets of items that appear together at least twice in the dataset.
+
+Let's analyze the dataset:
+
+    (105, 311, 269) appears 3 times
+    (105, 311, 032) appears 3 times
+    (105, 311, 999) appears 3 times
+    (105, 269, 032) appears 3 times
+    (105, 269, 999) appears 3 times
+    (105, 032, 999) appears 3 times
+    (311, 269, 032) appears 3 times
+    (311, 269, 999) appears 4 times
+    (311, 032, 999) appears 3 times
+    (269, 032, 999) appears 3 times
+    (064, 311, 269) appears 2 times
+    (064, 311, 032) appears 2 times
+    (064, 311, 999) appears 2 times
+    (064, 269, 032) appears 2 times
+    (064, 269, 999) appears 2 times
+    (064, 032, 999) appears 2 times
+
+The triplets of items that appear together at least twice are:
+
+set_length_3 = {{"105, 311, 269"},{"105, 311, 032"},{"105, 311, 999"},{"105, 269, 032"},{"105, 269, 999"},{"105, 032, 999"},{"311, 269, 032"},{"311, 269, 999"},{"311, 032, 999"},{"269, 032, 999"},{"064, 311, 269"},{"064, 311, 032"},{"064, 311, 999"},{"064, 269, 032"},{"064, 269, 999"},{"064, 032, 999"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 4, so set_length_4= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354,312,624,199,359,331,869
+
+128,105,943,311,269,032,999
+
+152,494,064,311,269,032,999
+
+014,105,064,311,269,032,999
+
+740,105,251,311,269,420,999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 4, we need to identify the quadruplets of items that appear together at least twice in the dataset.
+
+Let's analyze the dataset:
+
+    (105, 311, 269, 032) appears 3 times
+    (105, 311, 269, 999) appears 3 times
+    (105, 311, 032, 999) appears 3 times
+    (105, 269, 032, 999) appears 3 times
+    (311, 269, 032, 999) appears 3 times
+    (064, 105, 311, 269) appears 2 times
+    (064, 105, 311, 032) appears 2 times
+    (064, 105, 311, 999) appears 2 times
+    (064, 105, 269, 032) appears 2 times
+    (064, 105, 269, 999) appears 2 times
+    (064, 311, 269, 032) appears 2 times
+    (064, 311, 269, 999) appears 2 times
+    (064, 311, 032, 999) appears 2 times
+    (064, 269, 032, 999) appears 2 times
+
+The quadruplets of items that appear together at least twice are:
+
+set_length_4 = {{"105, 311, 269, 032"},{"105, 311, 269, 999"},{"105, 311, 032, 999"},{"105, 269, 032, 999"},{"311, 269, 032, 999"},{"064, 105, 311, 269"},{"064, 105, 311, 032"},{"064, 105, 311, 999"},{"064, 105, 269, 032"},{"064, 105, 269, 999"},{"064, 311, 269, 032"},{"064, 311, 269, 999"},{"064, 311, 032, 999"},{"064, 269, 032, 999"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 5, so set_length_5= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354,312,624,199,359,331,869
+
+128,105,943,311,269,032,999
+
+152,494,064,311,269,032,999
+
+014,105,064,311,269,032,999
+
+740,105,251,311,269,420,999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 5, we need to identify the quintuplets of items that appear together at least twice in the dataset.
+
+Let's analyze the dataset:
+
+    (105, 311, 269, 032, 999) appears 3 times
+    (064, 105, 311, 269, 032) appears 2 times
+    (064, 105, 311, 269, 999) appears 2 times
+    (064, 105, 311, 032, 999) appears 2 times
+    (064, 105, 269, 032, 999) appears 2 times
+    (064, 311, 269, 032, 999) appears 2 times
+
+The quintuplets of items that appear together at least twice are:
+
+set_length_5 = {{"105, 311, 269, 032, 999"},{"064, 105, 311, 269, 032"},{"064, 105, 311, 269, 999"},{"064, 105, 311, 032, 999"},{"064, 105, 269, 032, 999"},{"064, 311, 269, 032, 999"}}

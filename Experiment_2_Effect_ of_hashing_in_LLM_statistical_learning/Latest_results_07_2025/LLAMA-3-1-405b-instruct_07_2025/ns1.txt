@@ -1,0 +1,197 @@
+Find all frequent itemsets with minimal support equal to 2 and length 1, so set_length_1= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354,312,624,199,359,331,869
+
+128,105,943,311,269,032,999
+
+152,494,064,311,269,032,999
+
+014,105,064,311,269,032,999
+
+740,105,251,311,269,420,999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 1, we need to identify the items that appear at least twice in the dataset.
+
+Let's analyze the dataset:
+
+    354,312,624,199,359,331,869
+    128,105,943,311,269,032,999
+    152,494,064,311,269,032,999
+    014,105,064,311,269,032,999
+    740,105,251,311,269,420,999
+
+We can see that the following items appear at least twice:
+
+    311 (appears 5 times)
+    269 (appears 5 times)
+    105 (appears 3 times)
+    032 (appears 3 times)
+    999 (appears 4 times)
+
+Therefore, the set of frequent itemsets with minimal support equal to 2 and length 1 is:
+
+set_length_1 = {{"311"},{"269"},{"105"},{"032"},{"999"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 2, so set_length_2= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354,312,624,199,359,331,869
+
+128,105,943,311,269,032,999
+
+152,494,064,311,269,032,999
+
+014,105,064,311,269,032,999
+
+740,105,251,311,269,420,999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 2, we need to identify the pairs of items that appear together at least twice in the dataset.
+
+Let's analyze the dataset:
+
+    354,312,624,199,359,331,869
+    128,105,943,311,269,032,999
+    152,494,064,311,269,032,999
+    014,105,064,311,269,032,999
+    740,105,251,311,269,420,999
+
+We can see that the following pairs of items appear together at least twice:
+
+    311, 269 (appear together 5 times)
+    311, 032 (appear together 3 times)
+    269, 032 (appear together 3 times)
+    105, 311 (appear together 3 times)
+    105, 269 (appear together 3 times)
+    311, 999 (appear together 4 times)
+    269, 999 (appear together 4 times)
+
+Therefore, the set of frequent itemsets with minimal support equal to 2 and length 2 is:
+
+set_length_2 = {{"311, 269"},{"311, 032"},{"269, 032"},{"105, 311"},{"105, 269"},{"311, 999"},{"269, 999"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 3, so set_length_3= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354,312,624,199,359,331,869
+
+128,105,943,311,269,032,999
+
+152,494,064,311,269,032,999
+
+014,105,064,311,269,032,999
+
+740,105,251,311,269,420,999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 3, we need to identify the triplets of items that appear together at least twice in the dataset.
+
+Let's analyze the dataset:
+
+    354,312,624,199,359,331,869
+    128,105,943,311,269,032,999
+    152,494,064,311,269,032,999
+    014,105,064,311,269,032,999
+    740,105,251,311,269,420,999
+
+We can see that the following triplets of items appear together at least twice:
+
+    311, 269, 032 (appear together 3 times)
+    105, 311, 269 (appear together 3 times)
+    311, 269, 999 (appear together 4 times)
+
+Therefore, the set of frequent itemsets with minimal support equal to 2 and length 3 is:
+
+set_length_3 = {{"311, 269, 032"},{"105, 311, 269"},{"311, 269, 999"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 4, so set_length_4= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354,312,624,199,359,331,869
+
+128,105,943,311,269,032,999
+
+152,494,064,311,269,032,999
+
+014,105,064,311,269,032,999
+
+740,105,251,311,269,420,999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 4, we need to identify the quadruplets of items that appear together at least twice in the dataset.
+
+Let's analyze the dataset:
+
+    354,312,624,199,359,331,869
+    128,105,943,311,269,032,999
+    152,494,064,311,269,032,999
+    014,105,064,311,269,032,999
+    740,105,251,311,269,420,999
+
+We can see that the following quadruplets of items appear together at least twice:
+
+    105, 311, 269, 032 (appear together 3 times)
+
+Therefore, the set of frequent itemsets with minimal support equal to 2 and length 4 is:
+
+set_length_4 = {{"105, 311, 269, 032"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 5, so set_length_5= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and (). Consider the first row of the CSV as the name of the columns.
+
+354,312,624,199,359,331,869
+
+128,105,943,311,269,032,999
+
+152,494,064,311,269,032,999
+
+014,105,064,311,269,032,999
+
+740,105,251,311,269,420,999
+
+IMPORTANT:
+
+You are not allowed to use programming languages to solve this task!
+
+To find all frequent itemsets with minimal support equal to 2 and length 5, we need to identify the quintuplets of items that appear together at least twice in the dataset.
+
+Let's analyze the dataset:
+
+    354,312,624,199,359,331,869
+    128,105,943,311,269,032,999
+    152,494,064,311,269,032,999
+    014,105,064,311,269,032,999
+    740,105,251,311,269,420,999
+
+We can see that there are no quintuplets of items that appear together at least twice.
+
+However, if we look closely, we can see that the following quintuplet appears together twice in rows 3 and 4, and also in a slightly different form in row 2:
+
+    105, 311, 269, 032, 999 does not appear, but 105 is not present in row 2, but 943 is, the rest is the same
+
+However in rows 3 and 4 we have 105,064,311,269,032
+
+And also 105, 311, 269, 032, 999 appears in row 5 but 420 is present instead of 032 or 064
+
+However 105,311,269,032, appears in 3 rows but not with the same 5 elements
+
+Therefore, the set of frequent itemsets with minimal support equal to 2 and length 5 is:
+
+set_length_5 = {}
