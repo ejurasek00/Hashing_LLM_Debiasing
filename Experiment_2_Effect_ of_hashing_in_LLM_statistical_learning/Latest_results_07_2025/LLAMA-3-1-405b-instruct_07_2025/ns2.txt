@@ -14,6 +14,8 @@ IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
 
+LLAMA
+
 To find all frequent itemsets with minimal support equal to 2 and length 1, we need to identify the items that appear at least twice in the dataset.
 
 Let's analyze the dataset:
@@ -71,6 +73,8 @@ IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
 
+LLAMA
+
 To find all frequent itemsets with minimal support equal to 2 and length 2, we need to identify the pairs of items that appear together at least twice in the dataset.
 
 Let's analyze the dataset:
@@ -111,6 +115,8 @@ Find all frequent itemsets with minimal support equal to 2 and length 3, so set_
 IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
+
+LLAMA
 
 To find all frequent itemsets with minimal support equal to 2 and length 3, we need to identify the triples of items that appear together at least twice in the dataset.
 
@@ -155,6 +161,8 @@ IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
 
+LLAMA
+
 To find all frequent itemsets with minimal support equal to 2 and length 4, we need to identify the quadruples of items that appear together at least twice in the dataset.
 
 Let's analyze the dataset:
@@ -195,6 +203,8 @@ Find all frequent itemsets with minimal support equal to 2 and length 5, so set_
 IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
+
+LLAMA
 
 To find all frequent itemsets with minimal support equal to 2 and length 5, we need to identify the quintuples of items that appear together at least twice in the dataset.
 

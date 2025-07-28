@@ -14,6 +14,8 @@ IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
 
+LLAMA
+
 To find all frequent itemsets with minimal support equal to 2 and length 1, we need to identify the items that appear at least twice in each column.
 
 Here are the results:
@@ -47,6 +49,8 @@ platypus,6,omnivore,cold,no,false,negative
 IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
+
+LLAMA
 
 To find all frequent itemsets with minimal support equal to 2 and length 2, we need to identify the combinations of two items that appear at least twice.
 
@@ -89,6 +93,8 @@ platypus,6,omnivore,cold,no,false,negative
 IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
+
+LLAMA
 
 To find all frequent itemsets with minimal support equal to 2 and length 3, we need to identify the combinations of three items that appear at least twice.
 
@@ -137,6 +143,8 @@ IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
 
+LLAMA
+
 To find all frequent itemsets with minimal support equal to 2 and length 4, we need to identify the combinations of four items that appear at least twice.
 
 Here are the results:
@@ -178,6 +186,8 @@ platypus,6,omnivore,cold,no,false,negative
 IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
+
+LLAMA
 
 To find all frequent itemsets with minimal support equal to 2 and length 5, we need to identify the combinations of five items that appear at least twice.
 

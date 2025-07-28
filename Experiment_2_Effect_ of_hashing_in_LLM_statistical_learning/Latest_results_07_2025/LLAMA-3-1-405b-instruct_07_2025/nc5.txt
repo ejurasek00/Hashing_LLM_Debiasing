@@ -14,6 +14,8 @@ IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
 
+LLAMA
+
 To find all frequent itemsets with minimal support equal to 2 and length 1, we need to identify the individual items (or attributes) that appear at least twice in the dataset. Since the dataset is small, we can do this manually.
 
 Here are the individual items (attributes) and their frequencies:
@@ -57,6 +59,8 @@ platypus,4,carnivore,hot,yes,true,indeed
 IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
+
+LLAMA
 
 To find all frequent itemsets with minimal support equal to 2 and length 2, we need to identify the combinations of two items (or attributes) that appear at least twice in the dataset. We will consider all possible pairs of attributes and count their occurrences.
 
@@ -114,6 +118,8 @@ platypus,4,carnivore,hot,yes,true,indeed
 IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
+
+LLAMA
 
 To find all frequent itemsets with minimal support equal to 2 and length 3, we need to identify the combinations of three items (or attributes) that appear at least twice in the dataset. We will consider all possible triplets of attributes and count their occurrences.
 
@@ -182,6 +188,8 @@ IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
 
+LLAMA
+
 To find all frequent itemsets with minimal support equal to 2 and length 4, we need to identify the combinations of four items (or attributes) that appear at least twice in the dataset. We will consider all possible quadruplets of attributes and count their occurrences.
 
 Here are the quadruplets of items and their frequencies:
@@ -238,6 +246,8 @@ platypus,4,carnivore,hot,yes,true,indeed
 IMPORTANT:
 
 You are not allowed to use programming languages to solve this task!
+
+LLAMA
 
 To find all frequent itemsets with minimal support equal to 2 and length 5, we need to identify the combinations of five items (or attributes) that appear at least twice in the dataset. We will consider all possible quintuplets of attributes and count their occurrences.
 
