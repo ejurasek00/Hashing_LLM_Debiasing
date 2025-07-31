@@ -1,0 +1,699 @@
+Find all frequent itemsets with minimal support equal to 2 and length 1, so set_length_1= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and ().  Consider the first row of the CSV as the name of the columns.
+
+354C31,DBCEEF,6CE255,199D26,D59553,331981,869F50
+B2895C,B0FAAD,9ED0E8,D11884,269963,ADC8A2,999999
+1520D1,49E95E,A6463C,D11884,269963,ADC8A2,999999
+0BEA8D,B0FAAD,A6463C,D11884,269963,ADC8A2,999999
+7EA60D,B0FAAD,C5B9CC,D11884,269963,420666,999999
+
+IMPORTANT:
+You are not allowed to use programming languages to solve this task!
+
+ChatGPT
+
+We are given five transactions (rows), each consisting of a set of item codes (like 354C31, B2895C, etc.). Our task is to:
+
+    Find frequent itemsets of length 1 (i.e., individual items).
+
+    An itemset is frequent if it appears in at least 2 transactions (support ≥ 2).
+
+    The output must be of the form:
+    set_length_1={{"item1"},{"item2"},...}
+
+Step 1: List All Items Per Transaction
+
+Let’s write down the items per transaction:
+
+T1: 354C31, DBCEEF, 6CE255, 199D26, D59553, 331981, 869F50
+T2: B2895C, B0FAAD, 9ED0E8, D11884, 269963, ADC8A2, 999999
+T3: 1520D1, 49E95E, A6463C, D11884, 269963, ADC8A2, 999999
+T4: 0BEA8D, B0FAAD, A6463C, D11884, 269963, ADC8A2, 999999
+T5: 7EA60D, B0FAAD, C5B9CC, D11884, 269963, 420666, 999999
+Step 2: Count the Frequency of Each Item
+
+We now tally the number of times each item appears across the transactions:
+
+    354C31: 1
+
+    DBCEEF: 1
+
+    6CE255: 1
+
+    199D26: 1
+
+    D59553: 1
+
+    331981: 1
+
+    869F50: 1
+
+    B2895C: 1
+
+    B0FAAD: 3 ✅
+
+    9ED0E8: 1
+
+    D11884: 4 ✅
+
+    269963: 4 ✅
+
+    ADC8A2: 3 ✅
+
+    999999: 4 ✅
+
+    1520D1: 1
+
+    49E95E: 1
+
+    A6463C: 2 ✅
+
+    0BEA8D: 1
+
+    7EA60D: 1
+
+    C5B9CC: 1
+
+    420666: 1
+
+Step 3: Keep Items with Support ≥ 2
+
+The frequent items are:
+
+    B0FAAD
+
+    D11884
+
+    269963
+
+    ADC8A2
+
+    999999
+
+    A6463C
+
+Step 4: Format Answer as a Set of Sets
+
+We format each as a Python set of strings (length 1 sets):
+
+set_length_1={{"B0FAAD"},{"D11884"},{"269963"},{"ADC8A2"},{"999999"},{"A6463C"}}
+
+✅ Final Answer:
+
+set_length_1={{"B0FAAD"},{"D11884"},{"269963"},{"ADC8A2"},{"999999"},{"A6463C"}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 2, so set_length_2= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and ().  Consider the first row of the CSV as the name of the columns.
+
+354C31,DBCEEF,6CE255,199D26,D59553,331981,869F50
+B2895C,B0FAAD,9ED0E8,D11884,269963,ADC8A2,999999
+1520D1,49E95E,A6463C,D11884,269963,ADC8A2,999999
+0BEA8D,B0FAAD,A6463C,D11884,269963,ADC8A2,999999
+7EA60D,B0FAAD,C5B9CC,D11884,269963,420666,999999
+
+IMPORTANT:
+You are not allowed to use programming languages to solve this task!
+
+ChatGPT
+
+To find all frequent itemsets of length 2 with minimum support = 2, we will follow a manual process, since programming is not allowed.
+Step 1: Extract Transactions
+
+Let’s rewrite the transactions more clearly.
+
+T1 = {354C31, DBCEEF, 6CE255, 199D26, D59553, 331981, 869F50}
+T2 = {B2895C, B0FAAD, 9ED0E8, D11884, 269963, ADC8A2, 999999}
+T3 = {1520D1, 49E95E, A6463C, D11884, 269963, ADC8A2, 999999}
+T4 = {0BEA8D, B0FAAD, A6463C, D11884, 269963, ADC8A2, 999999}
+T5 = {7EA60D, B0FAAD, C5B9CC, D11884, 269963, 420666, 999999}
+Step 2: Identify All Frequent Items (from previous answer)
+
+Only these 6 items had support ≥ 2:
+
+    B0FAAD (3 times)
+
+    D11884 (4 times)
+
+    269963 (4 times)
+
+    ADC8A2 (3 times)
+
+    999999 (4 times)
+
+    A6463C (2 times)
+
+We will now look at all pairs (2-item combinations) from these.
+Step 3: Generate All 2-Item Combinations (C(6,2) = 15 combinations)
+
+We will now count in how many transactions each pair appears.
+
+    {B0FAAD, D11884} → T2, T4, T5 ✅ (3)
+
+    {B0FAAD, 269963} → T2, T4, T5 ✅ (3)
+
+    {B0FAAD, ADC8A2} → T2, T4 ✅ (2)
+
+    {B0FAAD, 999999} → T2, T4, T5 ✅ (3)
+
+    {B0FAAD, A6463C} → T4 ✅ (1) ✖️
+
+    {D11884, 269963} → T2, T3, T4, T5 ✅ (4)
+
+    {D11884, ADC8A2} → T2, T3, T4 ✅ (3)
+
+    {D11884, 999999} → T2, T3, T4, T5 ✅ (4)
+
+    {D11884, A6463C} → T3, T4 ✅ (2)
+
+    {269963, ADC8A2} → T2, T3, T4 ✅ (3)
+
+    {269963, 999999} → T2, T3, T4, T5 ✅ (4)
+
+    {269963, A6463C} → T3, T4 ✅ (2)
+
+    {ADC8A2, 999999} → T2, T3, T4 ✅ (3)
+
+    {ADC8A2, A6463C} → T3, T4 ✅ (2)
+
+    {999999, A6463C} → T3, T4 ✅ (2)
+
+Step 4: Keep Only Itemsets with Support ≥ 2
+
+We exclude only:
+
+    {B0FAAD, A6463C} = 1 time ✖️
+
+All other 14 combinations are frequent.
+Step 5: Format as Python Sets of Strings
+
+We now write the 14 frequent itemsets of length 2:
+
+set_length_2={{
+{"B0FAAD","D11884"},
+{"B0FAAD","269963"},
+{"B0FAAD","ADC8A2"},
+{"B0FAAD","999999"},
+{"D11884","269963"},
+{"D11884","ADC8A2"},
+{"D11884","999999"},
+{"D11884","A6463C"},
+{"269963","ADC8A2"},
+{"269963","999999"},
+{"269963","A6463C"},
+{"ADC8A2","999999"},
+{"ADC8A2","A6463C"},
+{"999999","A6463C"}
+}}
+
+✅ Final Answer:
+
+set_length_2={{
+{"B0FAAD","D11884"},
+{"B0FAAD","269963"},
+{"B0FAAD","ADC8A2"},
+{"B0FAAD","999999"},
+{"D11884","269963"},
+{"D11884","ADC8A2"},
+{"D11884","999999"},
+{"D11884","A6463C"},
+{"269963","ADC8A2"},
+{"269963","999999"},
+{"269963","A6463C"},
+{"ADC8A2","999999"},
+{"ADC8A2","A6463C"},
+{"999999","A6463C"}
+}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 3, so set_length_3= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and ().  Consider the first row of the CSV as the name of the columns.
+
+354C31,DBCEEF,6CE255,199D26,D59553,331981,869F50
+B2895C,B0FAAD,9ED0E8,D11884,269963,ADC8A2,999999
+1520D1,49E95E,A6463C,D11884,269963,ADC8A2,999999
+0BEA8D,B0FAAD,A6463C,D11884,269963,ADC8A2,999999
+7EA60D,B0FAAD,C5B9CC,D11884,269963,420666,999999
+
+IMPORTANT:
+You are not allowed to use programming languages to solve this task!
+
+ChatGPT
+
+We are asked to find all frequent itemsets of length 3 (i.e., sets of 3 items), with minimum support = 2. As before, we do this manually.
+Step 1: List Frequent 1-Itemsets (from earlier steps)
+
+From our previous work, the frequent items (appearing in ≥2 transactions) are:
+
+    B0FAAD
+
+    D11884
+
+    269963
+
+    ADC8A2
+
+    999999
+
+    A6463C
+
+We'll form all 3-item combinations from these 6 items.
+Step 2: Generate All 3-Item Combinations
+
+Number of combinations of 6 items taken 3 at a time:
+C(6, 3) = 20 combinations
+
+List of all 3-item combinations:
+
+    {B0FAAD, D11884, 269963}
+
+    {B0FAAD, D11884, ADC8A2}
+
+    {B0FAAD, D11884, 999999}
+
+    {B0FAAD, D11884, A6463C}
+
+    {B0FAAD, 269963, ADC8A2}
+
+    {B0FAAD, 269963, 999999}
+
+    {B0FAAD, 269963, A6463C}
+
+    {B0FAAD, ADC8A2, 999999}
+
+    {B0FAAD, ADC8A2, A6463C}
+
+    {B0FAAD, 999999, A6463C}
+
+    {D11884, 269963, ADC8A2}
+
+    {D11884, 269963, 999999}
+
+    {D11884, 269963, A6463C}
+
+    {D11884, ADC8A2, 999999}
+
+    {D11884, ADC8A2, A6463C}
+
+    {D11884, 999999, A6463C}
+
+    {269963, ADC8A2, 999999}
+
+    {269963, ADC8A2, A6463C}
+
+    {269963, 999999, A6463C}
+
+    {ADC8A2, 999999, A6463C}
+
+Step 3: Count Support for Each 3-Itemset
+
+We'll go through each one manually:
+
+    {B0FAAD, D11884, 269963} → T2, T4, T5 ✅ (3)
+
+    {B0FAAD, D11884, ADC8A2} → T2, T4 ✅ (2)
+
+    {B0FAAD, D11884, 999999} → T2, T4, T5 ✅ (3)
+
+    {B0FAAD, D11884, A6463C} → T4 ✅ (1) ✖️
+
+    {B0FAAD, 269963, ADC8A2} → T2, T4 ✅ (2)
+
+    {B0FAAD, 269963, 999999} → T2, T4, T5 ✅ (3)
+
+    {B0FAAD, 269963, A6463C} → T4 ✅ (1) ✖️
+
+    {B0FAAD, ADC8A2, 999999} → T2, T4 ✅ (2)
+
+    {B0FAAD, ADC8A2, A6463C} → T4 ✅ (1) ✖️
+
+    {B0FAAD, 999999, A6463C} → T4 ✅ (1) ✖️
+
+    {D11884, 269963, ADC8A2} → T2, T3, T4 ✅ (3)
+
+    {D11884, 269963, 999999} → T2, T3, T4, T5 ✅ (4)
+
+    {D11884, 269963, A6463C} → T3, T4 ✅ (2)
+
+    {D11884, ADC8A2, 999999} → T2, T3, T4 ✅ (3)
+
+    {D11884, ADC8A2, A6463C} → T3, T4 ✅ (2)
+
+    {D11884, 999999, A6463C} → T3, T4 ✅ (2)
+
+    {269963, ADC8A2, 999999} → T2, T3, T4 ✅ (3)
+
+    {269963, ADC8A2, A6463C} → T3, T4 ✅ (2)
+
+    {269963, 999999, A6463C} → T3, T4 ✅ (2)
+
+    {ADC8A2, 999999, A6463C} → T3, T4 ✅ (2)
+
+Step 4: Keep Only Itemsets with Support ≥ 2
+
+The frequent 3-itemsets (support ≥ 2) are:
+
+    {B0FAAD, D11884, 269963}
+
+    {B0FAAD, D11884, ADC8A2}
+
+    {B0FAAD, D11884, 999999}
+
+    {B0FAAD, 269963, ADC8A2}
+
+    {B0FAAD, 269963, 999999}
+
+    {B0FAAD, ADC8A2, 999999}
+
+    {D11884, 269963, ADC8A2}
+
+    {D11884, 269963, 999999}
+
+    {D11884, 269963, A6463C}
+
+    {D11884, ADC8A2, 999999}
+
+    {D11884, ADC8A2, A6463C}
+
+    {D11884, 999999, A6463C}
+
+    {269963, ADC8A2, 999999}
+
+    {269963, ADC8A2, A6463C}
+
+    {269963, 999999, A6463C}
+
+    {ADC8A2, 999999, A6463C}
+
+We exclude combinations that only appear once (support = 1):
+{B0FAAD, D11884, A6463C}, {B0FAAD, 269963, A6463C}, etc.
+Step 5: Format Answer as Python Set of Sets
+
+set_length_3={{
+{"B0FAAD","D11884","269963"},
+{"B0FAAD","D11884","ADC8A2"},
+{"B0FAAD","D11884","999999"},
+{"B0FAAD","269963","ADC8A2"},
+{"B0FAAD","269963","999999"},
+{"B0FAAD","ADC8A2","999999"},
+{"D11884","269963","ADC8A2"},
+{"D11884","269963","999999"},
+{"D11884","269963","A6463C"},
+{"D11884","ADC8A2","999999"},
+{"D11884","ADC8A2","A6463C"},
+{"D11884","999999","A6463C"},
+{"269963","ADC8A2","999999"},
+{"269963","ADC8A2","A6463C"},
+{"269963","999999","A6463C"},
+{"ADC8A2","999999","A6463C"}
+}}
+
+✅ Final Answer:
+
+set_length_3={{
+{"B0FAAD","D11884","269963"},
+{"B0FAAD","D11884","ADC8A2"},
+{"B0FAAD","D11884","999999"},
+{"B0FAAD","269963","ADC8A2"},
+{"B0FAAD","269963","999999"},
+{"B0FAAD","ADC8A2","999999"},
+{"D11884","269963","ADC8A2"},
+{"D11884","269963","999999"},
+{"D11884","269963","A6463C"},
+{"D11884","ADC8A2","999999"},
+{"D11884","ADC8A2","A6463C"},
+{"D11884","999999","A6463C"},
+{"269963","ADC8A2","999999"},
+{"269963","ADC8A2","A6463C"},
+{"269963","999999","A6463C"},
+{"ADC8A2","999999","A6463C"}
+}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 4, so set_length_4= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and ().  Consider the first row of the CSV as the name of the columns.
+
+354C31,DBCEEF,6CE255,199D26,D59553,331981,869F50
+B2895C,B0FAAD,9ED0E8,D11884,269963,ADC8A2,999999
+1520D1,49E95E,A6463C,D11884,269963,ADC8A2,999999
+0BEA8D,B0FAAD,A6463C,D11884,269963,ADC8A2,999999
+7EA60D,B0FAAD,C5B9CC,D11884,269963,420666,999999
+
+IMPORTANT:
+You are not allowed to use programming languages to solve this task!
+
+ChatGPT
+
+We are now looking for frequent itemsets of length 4 with support ≥ 2. Let’s proceed step by step.
+✅ Step 1: Known Frequent Items
+
+From earlier answers, these are the only items that appeared in at least 2 transactions:
+
+    B0FAAD
+
+    D11884
+
+    269963
+
+    ADC8A2
+
+    999999
+
+    A6463C
+
+We’ll form all combinations of 4-item sets from these 6.
+✅ Step 2: Generate All 4-Item Combinations
+
+Number of combinations = C(6, 4) = 15
+
+All possible 4-itemsets:
+
+    {B0FAAD, D11884, 269963, ADC8A2}
+
+    {B0FAAD, D11884, 269963, 999999}
+
+    {B0FAAD, D11884, 269963, A6463C}
+
+    {B0FAAD, D11884, ADC8A2, 999999}
+
+    {B0FAAD, D11884, ADC8A2, A6463C}
+
+    {B0FAAD, D11884, 999999, A6463C}
+
+    {B0FAAD, 269963, ADC8A2, 999999}
+
+    {B0FAAD, 269963, ADC8A2, A6463C}
+
+    {B0FAAD, 269963, 999999, A6463C}
+
+    {B0FAAD, ADC8A2, 999999, A6463C}
+
+    {D11884, 269963, ADC8A2, 999999}
+
+    {D11884, 269963, ADC8A2, A6463C}
+
+    {D11884, 269963, 999999, A6463C}
+
+    {D11884, ADC8A2, 999999, A6463C}
+
+    {269963, ADC8A2, 999999, A6463C}
+
+✅ Step 3: Count Support for Each 4-Itemset (must appear in ≥2 transactions)
+
+We check in which transactions each itemset appears.
+
+Transaction Sets for Reference:
+
+    T2 = {B0FAAD, D11884, 269963, ADC8A2, 999999}
+
+    T3 = {A6463C, D11884, 269963, ADC8A2, 999999}
+
+    T4 = {B0FAAD, A6463C, D11884, 269963, ADC8A2, 999999}
+
+    T5 = {B0FAAD, D11884, 269963, 999999}
+
+Now test each:
+
+    {B0FAAD, D11884, 269963, ADC8A2} → T2, T4 ✅
+
+    {B0FAAD, D11884, 269963, 999999} → T2, T4, T5 ✅
+
+    {B0FAAD, D11884, 269963, A6463C} → T4 only ✖️
+
+    {B0FAAD, D11884, ADC8A2, 999999} → T2, T4 ✅
+
+    {B0FAAD, D11884, ADC8A2, A6463C} → T4 only ✖️
+
+    {B0FAAD, D11884, 999999, A6463C} → T4 only ✖️
+
+    {B0FAAD, 269963, ADC8A2, 999999} → T2, T4 ✅
+
+    {B0FAAD, 269963, ADC8A2, A6463C} → T4 only ✖️
+
+    {B0FAAD, 269963, 999999, A6463C} → T4 only ✖️
+
+    {B0FAAD, ADC8A2, 999999, A6463C} → T4 only ✖️
+
+    {D11884, 269963, ADC8A2, 999999} → T2, T3, T4 ✅
+
+    {D11884, 269963, ADC8A2, A6463C} → T3, T4 ✅
+
+    {D11884, 269963, 999999, A6463C} → T3, T4 ✅
+
+    {D11884, ADC8A2, 999999, A6463C} → T3, T4 ✅
+
+    {269963, ADC8A2, 999999, A6463C} → T3, T4 ✅
+
+✅ Step 4: Keep Only Itemsets with Support ≥ 2
+
+Frequent 4-itemsets:
+
+    {B0FAAD, D11884, 269963, ADC8A2}
+
+    {B0FAAD, D11884, 269963, 999999}
+
+    {B0FAAD, D11884, ADC8A2, 999999}
+
+    {B0FAAD, 269963, ADC8A2, 999999}
+
+    {D11884, 269963, ADC8A2, 999999}
+
+    {D11884, 269963, ADC8A2, A6463C}
+
+    {D11884, 269963, 999999, A6463C}
+
+    {D11884, ADC8A2, 999999, A6463C}
+
+    {269963, ADC8A2, 999999, A6463C}
+
+✅ Step 5: Format as Python Set of Sets
+
+set_length_4={{
+{"B0FAAD","D11884","269963","ADC8A2"},
+{"B0FAAD","D11884","269963","999999"},
+{"B0FAAD","D11884","ADC8A2","999999"},
+{"B0FAAD","269963","ADC8A2","999999"},
+{"D11884","269963","ADC8A2","999999"},
+{"D11884","269963","ADC8A2","A6463C"},
+{"D11884","269963","999999","A6463C"},
+{"D11884","ADC8A2","999999","A6463C"},
+{"269963","ADC8A2","999999","A6463C"}
+}}
+
+✅ Final Answer:
+
+set_length_4={{
+{"B0FAAD","D11884","269963","ADC8A2"},
+{"B0FAAD","D11884","269963","999999"},
+{"B0FAAD","D11884","ADC8A2","999999"},
+{"B0FAAD","269963","ADC8A2","999999"},
+{"D11884","269963","ADC8A2","999999"},
+{"D11884","269963","ADC8A2","A6463C"},
+{"D11884","269963","999999","A6463C"},
+{"D11884","ADC8A2","999999","A6463C"},
+{"269963","ADC8A2","999999","A6463C"}
+}}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Find all frequent itemsets with minimal support equal to 2 and length 5, so set_length_5= {<<itemsets>>}. Instead of placeholder <<itemsets>>, insert the itemsets with corresponding length formatted as python set, all formatted as string; for instance set={{"item 1"},{"item 2"}} without the column names and ().  Consider the first row of the CSV as the name of the columns.
+
+354C31,DBCEEF,6CE255,199D26,D59553,331981,869F50
+B2895C,B0FAAD,9ED0E8,D11884,269963,ADC8A2,999999
+1520D1,49E95E,A6463C,D11884,269963,ADC8A2,999999
+0BEA8D,B0FAAD,A6463C,D11884,269963,ADC8A2,999999
+7EA60D,B0FAAD,C5B9CC,D11884,269963,420666,999999
+
+IMPORTANT:
+You are not allowed to use programming languages to solve this task!
+
+ChatGPT
+
+We are asked to find all frequent itemsets of length 5 (5-item combinations) with support ≥ 2, using the given transactions, and without programming.
+✅ Step 1: Known Frequent Items
+
+From previous steps, the 6 items that appear in at least 2 transactions are:
+
+    B0FAAD
+
+    D11884
+
+    269963
+
+    ADC8A2
+
+    999999
+
+    A6463C
+
+From these, generate 5-item combinations.
+✅ Step 2: Generate All 5-Item Combinations
+
+C(6, 5) = 6 combinations.
+
+Here they are:
+
+    {B0FAAD, D11884, 269963, ADC8A2, 999999}
+
+    {B0FAAD, D11884, 269963, ADC8A2, A6463C}
+
+    {B0FAAD, D11884, 269963, 999999, A6463C}
+
+    {B0FAAD, D11884, ADC8A2, 999999, A6463C}
+
+    {B0FAAD, 269963, ADC8A2, 999999, A6463C}
+
+    {D11884, 269963, ADC8A2, 999999, A6463C}
+
+✅ Step 3: Check Which Transactions Contain Each 5-Itemset
+
+Let’s analyze the 4 relevant transactions (T2 to T5):
+
+    T2 = {B0FAAD, D11884, 269963, ADC8A2, 999999}
+
+    T3 = {A6463C, D11884, 269963, ADC8A2, 999999}
+
+    T4 = {B0FAAD, A6463C, D11884, 269963, ADC8A2, 999999}
+
+    T5 = {B0FAAD, D11884, 269963, 999999}
+
+Now check:
+
+    {B0FAAD, D11884, 269963, ADC8A2, 999999}
+    → Present in T2 and T4 ✅ (Support = 2)
+
+    {B0FAAD, D11884, 269963, ADC8A2, A6463C}
+    → Present only in T4 ✖️
+
+    {B0FAAD, D11884, 269963, 999999, A6463C}
+    → Present only in T4 ✖️
+
+    {B0FAAD, D11884, ADC8A2, 999999, A6463C}
+    → Present only in T4 ✖️
+
+    {B0FAAD, 269963, ADC8A2, 999999, A6463C}
+    → Present only in T4 ✖️
+
+    {D11884, 269963, ADC8A2, 999999, A6463C}
+    → Present in T3 and T4 ✅ (Support = 2)
+
+✅ Step 4: Keep Frequent Itemsets (support ≥ 2)
+
+Frequent 5-itemsets:
+
+    {B0FAAD, D11884, 269963, ADC8A2, 999999}
+
+    {D11884, 269963, ADC8A2, 999999, A6463C}
+
+✅ Step 5: Format as Python Set of Sets
+
+set_length_5={{
+{"B0FAAD","D11884","269963","ADC8A2","999999"},
+{"D11884","269963","ADC8A2","999999","A6463C"}
+}}
+
+✅ Final Answer:
+
+set_length_5={{
+{"B0FAAD","D11884","269963","ADC8A2","999999"},
+{"D11884","269963","ADC8A2","999999","A6463C"}
+}}
