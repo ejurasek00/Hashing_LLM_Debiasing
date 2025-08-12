@@ -156,6 +156,7 @@ root
 │
 ├───Experiment_2_Effect_ of_hashing_in_LLM_statistical_learning
 │   │   comparator.py - python file used to compare generated itemsets (LLM vs Appriori)
+│   │   results.pdf - experiment results (found itemsets and hallucinations) - including the latest results as well
 │   │   Table_results.txt - table of experiment results (found itemsets and hallucinations)
 │   │
 │   ├───ChatGPT-4o
@@ -178,12 +179,59 @@ root
 │   ├───CSV_files
 │   │       CSV-Correct.csv - the CORRECT dataset
 │   │       CSV-Hashed.csv - the HASHED dataset
+│   │       CSV-Short.csv - the SHORT dataset
 │   │       CSV-Wrong.csv - the WRONG dataset
 │   │
 │   ├───Gold_files
 │   │       gold_CSV_correct.txt - Appriori (reference solution) itemsets of various lenghts on the CORRECT dataset
 │   │       gold_CSV_hashed.txt - Appriori (reference solution) itemsets of various lenghts on the HASHED dataset
+│   │       gold_CSV_short.txt - Appriori (reference solution) itemsets of various lenghts on the SHORT dataset
 │   │       gold_CSV_wrong.txt - Appriori (reference solution) itemsets of various lenghts on the WRONG dataset
+│   │
+│   ├───Latest_results_07_2025 - new iterations of the experiment performed in July 2025- including the short hashes
+│   │   ├───ChatGPT-4o_07_2025
+│   │   │   NC1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 1. iteration
+│   │   │   NC2.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 2. iteration
+│   │   │   NC3.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 3. iteration
+│   │   │   NC4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 4. iteration
+│   │   │   NC5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 5. iteration
+│   │   │   NH1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 1. iteration
+│   │   │   NH2.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 2. iteration
+│   │   │   NH3.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 3. iteration
+│   │   │   NH4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 4. iteration
+│   │   │   NH5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 5. iteration
+│   │   │   NS1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the SHORT dataset 1. iteration
+│   │   │   NS2.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the SHORT dataset 2. iteration
+│   │   │   NS3.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the SHORT dataset 3. iteration
+│   │   │   NS4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the SHORT dataset 4. iteration
+│   │   │   NS5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the SHORT dataset 5. iteration
+│   │   │   NW1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 1. iteration
+│   │   │   NW2.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 2. iteration
+│   │   │   NW3.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 3. iteration
+│   │   │   NW4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 4. iteration
+│   │   │   NW5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 5. iteration
+│   │   │
+│   │   └───LLAMA-3-1-405b-instruct_07_2025
+│   │       nc1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 1. iteration
+│   │       nc2.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 2. iteration
+│   │       nc3.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 3. iteration
+│   │       nc4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 4. iteration
+│   │       nc5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 5. iteration
+│   │       nh1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 1. iteration
+│   │       nh2.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 2. iteration
+│   │       nh3.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 3. iteration
+│   │       nh4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 4. iteration
+│   │       nh5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the HASHED dataset 5. iteration
+│   │       ns1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the SHORT dataset 1. iteration
+│   │       ns2.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the SHORT dataset 2. iteration
+│   │       ns3.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the SHORT dataset 3. iteration
+│   │       ns4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the SHORT dataset 4. iteration
+│   │       ns5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the SHORT dataset 5. iteration
+│   │       nw1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 1. iteration
+│   │       nw2.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 2. iteration
+│   │       nw3.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 3. iteration
+│   │       nw4.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 4. iteration
+│   │       nw5.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the WRONG dataset 5. iteration
 │   │
 │   └───LLAMA-3-1-405b-instruct
 │           c1.txt - LLM responses to task of finding frequent itemsets of variouns lengths on the CORRECT dataset 1. iteration
